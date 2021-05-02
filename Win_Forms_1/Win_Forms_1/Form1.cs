@@ -16,5 +16,33 @@ namespace Win_Forms_1
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if(txtUserName.Text == "Nathan Henrique" && txtPassword.Text == "nhtatdcrgt")
+            {
+                new Form2().Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Usuário ou senha incorretos, tente novamente!");
+                txtUserName.Clear();
+                txtPassword.Clear();
+                txtUserName.Focus();
+            }
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            txtUserName.Clear();
+            txtPassword.Clear();
+            txtUserName.Focus();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
