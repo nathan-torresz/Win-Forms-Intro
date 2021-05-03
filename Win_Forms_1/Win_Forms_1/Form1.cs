@@ -19,7 +19,7 @@ namespace Win_Forms_1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(txtUserName.Text == "Nathan Henrique" && txtPassword.Text == "nhtatdcrgt")
+            if(txtUserName.Text == "Nathan" && txtPassword.Text == "nhtatdcrgt")
             {
                 new Form2().Show();
                 this.Hide();
