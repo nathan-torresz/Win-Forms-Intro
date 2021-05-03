@@ -104,5 +104,8 @@
   <ItemGroup>
     <None Include="Resources\img_bg_38.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\show_hide_password-07-512.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -24,6 +24,11 @@ namespace Win_Forms_1
                 new Form2().Show();
                 this.Hide();
             }
+            else if (txtUserName.Text == "Antenor" && txtPassword.Text == "nht2402")
+            {
+                new Form2().Show();
+                this.Hide();
+            }
             else
             {
                 MessageBox.Show("Usuário ou senha incorretos, tente novamente!");
@@ -43,6 +48,18 @@ namespace Win_Forms_1
         private void label4_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void Show_Hide_CheckedChanged(object sender, EventArgs e)
+        {
+            if (Show_Hide.Checked)
+            {
+                txtPassword.UseSystemPasswordChar = true;
+            }
+            else
+            {
+                txtPassword.UseSystemPasswordChar = false;
+            }
         }
     }
 }
