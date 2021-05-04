@@ -113,5 +113,56 @@
   <ItemGroup>
     <None Include="Resources\fundo_tela_login.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User_icon_BLACK-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\laptop-user-1-1179329.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hidepassw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fundologin.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plano-fundo-imagem_5d8a7a7c0c6c5_bg-login.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\log ou icon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\small logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\89837785-login-icon-isolated-on-elegant-green-round-button-abstract-illustration.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit-door-log-out-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9c99bc26ff55b330ace13e9c3abd82dd.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User_icon_BLACK-011.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\laptop-user-1-11793291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\open-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kisspng-businessperson-computer-icons-avatar-clip-art-lattice-5b0508dc6a3a10.0013931115270566044351.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kisspng-web-development-php-software-developer-programmer-computer-user-icon-svg-5ab0fde8b1e707.4897380415215487767287.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

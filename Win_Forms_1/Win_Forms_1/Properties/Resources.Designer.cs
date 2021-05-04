@@ -63,6 +63,26 @@ namespace Win_Forms_1.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _89837785_login_icon_isolated_on_elegant_green_round_button_abstract_illustration {
+            get {
+                object obj = ResourceManager.GetObject("89837785-login-icon-isolated-on-elegant-green-round-button-abstract-illustration", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _9c99bc26ff55b330ace13e9c3abd82dd {
+            get {
+                object obj = ResourceManager.GetObject("9c99bc26ff55b330ace13e9c3abd82dd", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Avatar_Login {
             get {
                 object obj = ResourceManager.GetObject("Avatar_Login", resourceCulture);
@@ -76,6 +96,16 @@ namespace Win_Forms_1.Properties {
         internal static System.Drawing.Bitmap cabelin {
             get {
                 object obj = ResourceManager.GetObject("cabelin", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cadeado {
+            get {
+                object obj = ResourceManager.GetObject("cadeado", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,9 +133,39 @@ namespace Win_Forms_1.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap exit_door_log_out_512 {
+            get {
+                object obj = ResourceManager.GetObject("exit-door-log-out-512", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap fundo_tela_login {
             get {
                 object obj = ResourceManager.GetObject("fundo_tela_login", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fundologin {
+            get {
+                object obj = ResourceManager.GetObject("fundologin", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hidepassw {
+            get {
+                object obj = ResourceManager.GetObject("hidepassw", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,9 +183,91 @@ namespace Win_Forms_1.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap kisspng_businessperson_computer_icons_avatar_clip_art_lattice_5b0508dc6a3a10_0013931115270566044351 {
+            get {
+                object obj = ResourceManager.GetObject("kisspng-businessperson-computer-icons-avatar-clip-art-lattice-5b0508dc6a3a10.0013" +
+                        "931115270566044351", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap kisspng_web_development_php_software_developer_programmer_computer_user_icon_svg_5ab0fde8b1e707_4897380415215487767287 {
+            get {
+                object obj = ResourceManager.GetObject("kisspng-web-development-php-software-developer-programmer-computer-user-icon-svg-" +
+                        "5ab0fde8b1e707.4897380415215487767287", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap laptop_user_1_1179329 {
+            get {
+                object obj = ResourceManager.GetObject("laptop-user-1-1179329", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap laptop_user_1_11793291 {
+            get {
+                object obj = ResourceManager.GetObject("laptop-user-1-11793291", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap lock_icon_png_15 {
             get {
                 object obj = ResourceManager.GetObject("lock-icon-png-15", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap log_ou_icon {
+            get {
+                object obj = ResourceManager.GetObject("log ou icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap login {
+            get {
+                object obj = ResourceManager.GetObject("login", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logout {
+            get {
+                object obj = ResourceManager.GetObject("logout", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap open_512 {
+            get {
+                object obj = ResourceManager.GetObject("open-512", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -143,9 +285,49 @@ namespace Win_Forms_1.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap plano_fundo_imagem_5d8a7a7c0c6c5_bg_login {
+            get {
+                object obj = ResourceManager.GetObject("plano-fundo-imagem_5d8a7a7c0c6c5_bg-login", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap show_hide_password_07_512 {
             get {
                 object obj = ResourceManager.GetObject("show_hide_password-07-512", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap small_logout {
+            get {
+                object obj = ResourceManager.GetObject("small logout", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap User_icon_BLACK_01 {
+            get {
+                object obj = ResourceManager.GetObject("User_icon_BLACK-01", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap User_icon_BLACK_011 {
+            get {
+                object obj = ResourceManager.GetObject("User_icon_BLACK-011", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
