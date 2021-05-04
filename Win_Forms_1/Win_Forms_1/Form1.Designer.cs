@@ -42,7 +42,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.Show_Hide = new System.Windows.Forms.CheckBox();
+            this.txtpassword2 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -118,6 +118,7 @@
             this.txtUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUserName.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.txtUserName.Location = new System.Drawing.Point(243, 216);
+            this.txtUserName.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
             this.txtUserName.Multiline = true;
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(333, 38);
@@ -130,9 +131,9 @@
             this.txtPassword.Location = new System.Drawing.Point(243, 294);
             this.txtPassword.Multiline = true;
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(333, 36);
             this.txtPassword.TabIndex = 11;
+            this.txtPassword.TabStop = false;
             // 
             // pictureBox4
             // 
@@ -143,6 +144,8 @@
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 12;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox4_MouseDown);
+            this.pictureBox4.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox4_MouseUp);
             // 
             // pictureBox3
             // 
@@ -178,16 +181,18 @@
             // 
             this.timer1.Enabled = true;
             this.timer1.Interval = 1;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // Show_Hide
+            // txtpassword2
             // 
-            this.Show_Hide.AutoSize = true;
-            this.Show_Hide.Location = new System.Drawing.Point(638, 313);
-            this.Show_Hide.Name = "Show_Hide";
-            this.Show_Hide.Size = new System.Drawing.Size(18, 17);
-            this.Show_Hide.TabIndex = 13;
-            this.Show_Hide.UseVisualStyleBackColor = true;
-            this.Show_Hide.CheckedChanged += new System.EventHandler(this.Show_Hide_CheckedChanged);
+            this.txtpassword2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtpassword2.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.txtpassword2.Location = new System.Drawing.Point(243, 294);
+            this.txtpassword2.Multiline = true;
+            this.txtpassword2.Name = "txtpassword2";
+            this.txtpassword2.PasswordChar = '*';
+            this.txtpassword2.Size = new System.Drawing.Size(333, 36);
+            this.txtpassword2.TabIndex = 14;
             // 
             // Form1
             // 
@@ -195,7 +200,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.Show_Hide);
+            this.Controls.Add(this.txtpassword2);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUserName);
@@ -235,7 +240,7 @@
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.CheckBox Show_Hide;
+        private System.Windows.Forms.TextBox txtpassword2;
     }
 }
 

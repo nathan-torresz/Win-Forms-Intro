@@ -19,12 +19,12 @@ namespace Win_Forms_1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(txtUserName.Text == "Nathan" && txtPassword.Text == "nhtatdcrgt")
+            if(txtUserName.Text == "Nathan" && txtpassword2.Text == "nhtatdcrgt")
             {
                 new Form2().Show();
                 this.Hide();
             }
-            else if (txtUserName.Text == "Antenor" && txtPassword.Text == "nht2402")
+            else if (txtUserName.Text == "Antenor" && txtpassword2.Text == "nht2402")
             {
                 new Form2().Show();
                 this.Hide();
@@ -33,7 +33,7 @@ namespace Win_Forms_1
             {
                 MessageBox.Show("Usuário ou senha incorretos, tente novamente!");
                 txtUserName.Clear();
-                txtPassword.Clear();
+                txtpassword2.Clear();
                 txtUserName.Focus();
             }
         }
@@ -41,7 +41,7 @@ namespace Win_Forms_1
         private void label3_Click(object sender, EventArgs e)
         {
             txtUserName.Clear();
-            txtPassword.Clear();
+            txtpassword2.Clear();
             txtUserName.Focus();
         }
 
@@ -50,16 +50,19 @@ namespace Win_Forms_1
             Application.Exit();
         }
 
-        private void Show_Hide_CheckedChanged(object sender, EventArgs e)
+        private void pictureBox4_MouseDown(object sender, MouseEventArgs e)
         {
-            if (Show_Hide.Checked)
-            {
-                txtPassword.UseSystemPasswordChar = true;
-            }
-            else
-            {
-                txtPassword.UseSystemPasswordChar = false;
-            }
+            txtpassword2.Hide();
+        }
+
+        private void pictureBox4_MouseUp(object sender, MouseEventArgs e)
+        {
+            txtpassword2.Show();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            txtPassword.Text = txtpassword2.Text;
         }
     }
 }
