@@ -58,6 +58,7 @@ namespace Win_Forms_1
         private void pictureBox4_MouseUp(object sender, MouseEventArgs e)
         {
             txtpassword2.Show();
+            txtpassword2.Focus();
         }
 
         private void timer1_Tick(object sender, EventArgs e)

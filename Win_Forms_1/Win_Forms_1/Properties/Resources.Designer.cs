@@ -103,6 +103,16 @@ namespace Win_Forms_1.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap fundo_tela_login {
+            get {
+                object obj = ResourceManager.GetObject("fundo_tela_login", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap img_bg_38 {
             get {
                 object obj = ResourceManager.GetObject("img_bg_38", resourceCulture);
@@ -116,6 +126,16 @@ namespace Win_Forms_1.Properties {
         internal static System.Drawing.Bitmap lock_icon_png_15 {
             get {
                 object obj = ResourceManager.GetObject("lock-icon-png-15", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PERfIL {
+            get {
+                object obj = ResourceManager.GetObject("PERfIL", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
