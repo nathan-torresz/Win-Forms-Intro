@@ -163,6 +163,16 @@ namespace Win_Forms_1.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap hide_376_879895 {
+            get {
+                object obj = ResourceManager.GetObject("hide-376-879895", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap hidepassw {
             get {
                 object obj = ResourceManager.GetObject("hidepassw", resourceCulture);

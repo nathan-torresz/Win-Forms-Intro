@@ -50,17 +50,18 @@ namespace Win_Forms_1
             Application.Exit();
         }
 
-        private void pictureBox4_MouseDown(object sender, MouseEventArgs e)
+        private void pictureBox5_MouseDown(object sender, MouseEventArgs e)
         {
+            pictureBox5.Hide();
             txtpassword2.Hide();
         }
 
-        private void pictureBox4_MouseUp(object sender, MouseEventArgs e)
+        private void pictureBox5_MouseUp(object sender, MouseEventArgs e)
         {
+            pictureBox5.Show();
             txtpassword2.Show();
             txtpassword2.Focus();
-        }
-
+        } 
         private void timer1_Tick(object sender, EventArgs e)
         {
             txtPassword.Text = txtpassword2.Text;
