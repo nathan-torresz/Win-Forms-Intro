@@ -44,6 +44,8 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -99,6 +101,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label3.Font = new System.Drawing.Font("Bahnschrift", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Navy;
@@ -113,6 +116,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label4.Font = new System.Drawing.Font("Bahnschrift", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Navy;
@@ -174,8 +178,6 @@
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 12;
             this.pictureBox4.TabStop = false;
-            this.pictureBox4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox4_MouseDown);
-            this.pictureBox4.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox4_MouseUp);
             // 
             // pictureBox3
             // 
@@ -213,6 +215,7 @@
             // pictureBox5
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox5.Image = global::Win_Forms_1.Properties.Resources.hide_376_879895;
             this.pictureBox5.Location = new System.Drawing.Point(573, 294);
             this.pictureBox5.Name = "pictureBox5";
@@ -223,6 +226,37 @@
             this.pictureBox5.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox5_MouseDown);
             this.pictureBox5.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox5_MouseUp);
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.BackColor = System.Drawing.Color.Transparent;
+            this.checkBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.checkBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBox1.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.checkBox1.Location = new System.Drawing.Point(618, 24);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(108, 21);
+            this.checkBox1.TabIndex = 16;
+            this.checkBox1.Text = "Cadastrar-se";
+            this.checkBox1.UseVisualStyleBackColor = false;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label1.Font = new System.Drawing.Font("Bauhaus 93", 10.2F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Transparent;
+            this.label1.Location = new System.Drawing.Point(569, 48);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(186, 19);
+            this.label1.TabIndex = 17;
+            this.label1.Text = "Ir para tela de cadastro";
+            this.label1.Visible = false;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -231,6 +265,8 @@
             this.BackgroundImage = global::Win_Forms_1.Properties.Resources.fundologin;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 479);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.txtpassword2);
             this.Controls.Add(this.pictureBox4);
@@ -275,6 +311,8 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.TextBox txtpassword2;
         private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Label label1;
     }
 }
 

@@ -66,5 +66,20 @@ namespace Win_Forms_1
         {
             txtPassword.Text = txtpassword2.Text;
         }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if(checkBox1.Checked) label1.Visible = true;
+            else
+            {
+                label1.Visible = false;
+            }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            new Form3().Show();
+            this.Hide();
+        }
     }
 }
