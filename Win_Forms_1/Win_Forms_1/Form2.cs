@@ -11,9 +11,9 @@ using System.Threading;
 
 namespace Win_Forms_1
 {
-    public partial class Form2 : Form
+    public partial class FormInterface : Form
     {
-        public Form2()
+        public FormInterface()
         {
             InitializeComponent();
         }
@@ -33,6 +33,24 @@ namespace Win_Forms_1
         {
             label2.Visible = false;
             Thread.Sleep(500);
+        }
+
+        private void btvendas_Click(object sender, EventArgs e)
+        {
+            new formVendas().Show();
+            this.Hide();
+        }
+
+        private void btRendaDiaria_Click(object sender, EventArgs e)
+        {
+            new formRendaDiaria().Show();
+            this.Hide();
+        }
+
+        private void btEstoque_Click(object sender, EventArgs e)
+        {
+            new formEstoque().Show();
+            this.Hide();
         }
     }
 }

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Win_Forms_1
 {
@@ -19,23 +20,7 @@ namespace Win_Forms_1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(txtUserName.Text == "Nathan" && txtpassword2.Text == "nhtatd")
-            {
-                new Form2().Show();
-                this.Hide();
-            }
-            else if (txtUserName.Text == "Antenor" && txtpassword2.Text == "nht2402")
-            {
-                new Form2().Show();
-                this.Hide();
-            }
-            else
-            {
-                MessageBox.Show("Usuário ou senha incorretos, tente novamente!");
-                txtUserName.Clear();
-                txtpassword2.Clear();
-                txtUserName.Focus();
-            }
+            Logar();
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -78,8 +63,40 @@ namespace Win_Forms_1
 
         private void label1_Click(object sender, EventArgs e)
         {
-            new Form3().Show();
+            new FormCadastro().Show();
             this.Hide();
         }
+
+        SqlConnection conexao1 = new SqlConnection(Properties.Settings.Default.conexao);
+        string usuario;
+        string senha;
+
+        private void Logar()
+        {
+            string login = "SELECT Nome, Senha FROM Usuario WHERE Nome= '" + txtUserName.Text + "' AND Senha='" + txtpassword2.Text + "'";
+            SqlCommand comando = new SqlCommand(login, conexao1);
+            comando.CommandType = CommandType.Text;
+            SqlDataReader reader;
+            try
+            {
+                conexao1.Open();
+                reader = comando.ExecuteReader();
+                if (reader.Read())
+                {
+                    usuario = reader[0].ToString();
+                    senha = reader[1].ToString();
+                    conexao1.Close();
+                    if (usuario.Equals(txtUserName.Text)&& senha.Equals(txtpassword2.Text))
+                    {
+                        new FormInterface().Show();
+                        this.Hide();
+                    }
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Erro ao efetuar login!" + ex);
+            }
+        }   
     }
 }

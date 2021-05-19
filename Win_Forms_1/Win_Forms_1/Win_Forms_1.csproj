@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BD.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,6 +65,25 @@
     <Compile Include="Form3.Designer.cs">
       <DependentUpon>Form3.cs</DependentUpon>
     </Compile>
+    <Compile Include="formEstoque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formEstoque.Designer.cs">
+      <DependentUpon>formEstoque.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formRendaDiaria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formRendaDiaria.Designer.cs">
+      <DependentUpon>formRendaDiaria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formVendas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formVendas.Designer.cs">
+      <DependentUpon>formVendas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Funcionario.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -74,6 +94,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form3.resx">
       <DependentUpon>Form3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formEstoque.resx">
+      <DependentUpon>formEstoque.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formRendaDiaria.resx">
+      <DependentUpon>formRendaDiaria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formVendas.resx">
+      <DependentUpon>formVendas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
