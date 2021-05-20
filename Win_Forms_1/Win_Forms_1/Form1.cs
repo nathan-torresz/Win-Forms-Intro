@@ -97,6 +97,6 @@ namespace Win_Forms_1
             {
                 MessageBox.Show("Erro ao efetuar login!" + ex);
             }
-        }   
+        }
     }
 }

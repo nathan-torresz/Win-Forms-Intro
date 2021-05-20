@@ -20,7 +20,8 @@ namespace Win_Forms_1
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            new Form1().Show();
+            this.Hide();
         }
 
         private void pictureBox1_MouseEnter(object sender, EventArgs e)
