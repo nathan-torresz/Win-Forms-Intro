@@ -92,7 +92,7 @@
             this.button1.Location = new System.Drawing.Point(184, 381);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(429, 43);
-            this.button1.TabIndex = 6;
+            this.button1.TabIndex = 3;
             this.button1.Text = "LOG IN";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -108,7 +108,7 @@
             this.label3.Location = new System.Drawing.Point(511, 357);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(102, 21);
-            this.label3.TabIndex = 8;
+            this.label3.TabIndex = 2;
             this.label3.Text = "Clear Fields";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
@@ -123,7 +123,7 @@
             this.label4.Location = new System.Drawing.Point(378, 427);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(39, 21);
-            this.label4.TabIndex = 9;
+            this.label4.TabIndex = 4;
             this.label4.Text = "Exit";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
@@ -137,7 +137,7 @@
             this.txtUserName.Multiline = true;
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(333, 38);
-            this.txtUserName.TabIndex = 10;
+            this.txtUserName.TabIndex = 0;
             // 
             // txtPassword
             // 
@@ -166,7 +166,7 @@
             this.txtpassword2.Name = "txtpassword2";
             this.txtpassword2.PasswordChar = '*';
             this.txtpassword2.Size = new System.Drawing.Size(333, 36);
-            this.txtpassword2.TabIndex = 14;
+            this.txtpassword2.TabIndex = 1;
             // 
             // pictureBox4
             // 
@@ -236,7 +236,7 @@
             this.checkBox1.Location = new System.Drawing.Point(618, 24);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(108, 21);
-            this.checkBox1.TabIndex = 16;
+            this.checkBox1.TabIndex = 5;
             this.checkBox1.Text = "Cadastrar-se";
             this.checkBox1.UseVisualStyleBackColor = false;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
@@ -252,7 +252,7 @@
             this.label1.Location = new System.Drawing.Point(569, 48);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(186, 19);
-            this.label1.TabIndex = 17;
+            this.label1.TabIndex = 6;
             this.label1.Text = "Ir para tela de cadastro";
             this.label1.Visible = false;
             this.label1.Click += new System.EventHandler(this.label1_Click);

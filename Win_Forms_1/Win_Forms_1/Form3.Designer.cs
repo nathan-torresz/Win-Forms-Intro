@@ -50,7 +50,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(61, 58);
+            this.label1.Location = new System.Drawing.Point(180, 64);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(68, 24);
             this.label1.TabIndex = 4;
@@ -62,7 +62,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(61, 101);
+            this.label2.Location = new System.Drawing.Point(180, 107);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(49, 24);
             this.label2.TabIndex = 5;
@@ -74,7 +74,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Transparent;
-            this.label3.Location = new System.Drawing.Point(61, 146);
+            this.label3.Location = new System.Drawing.Point(180, 152);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(91, 24);
             this.label3.TabIndex = 6;
@@ -86,7 +86,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Transparent;
-            this.label4.Location = new System.Drawing.Point(61, 193);
+            this.label4.Location = new System.Drawing.Point(180, 199);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(75, 24);
             this.label4.TabIndex = 7;
@@ -98,7 +98,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Transparent;
-            this.label5.Location = new System.Drawing.Point(61, 239);
+            this.label5.Location = new System.Drawing.Point(180, 245);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(71, 24);
             this.label5.TabIndex = 9;
@@ -110,7 +110,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Transparent;
-            this.label6.Location = new System.Drawing.Point(61, 287);
+            this.label6.Location = new System.Drawing.Point(180, 293);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(69, 24);
             this.label6.TabIndex = 11;
@@ -119,53 +119,53 @@
             // tbTelefone
             // 
             this.tbTelefone.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbTelefone.Location = new System.Drawing.Point(168, 147);
+            this.tbTelefone.Location = new System.Drawing.Point(287, 153);
             this.tbTelefone.Mask = "(00) 00000-0000";
             this.tbTelefone.Name = "tbTelefone";
             this.tbTelefone.Size = new System.Drawing.Size(326, 32);
-            this.tbTelefone.TabIndex = 13;
+            this.tbTelefone.TabIndex = 2;
             // 
             // tbNomeCadastro
             // 
             this.tbNomeCadastro.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbNomeCadastro.Location = new System.Drawing.Point(168, 59);
+            this.tbNomeCadastro.Location = new System.Drawing.Point(287, 65);
             this.tbNomeCadastro.Name = "tbNomeCadastro";
             this.tbNomeCadastro.Size = new System.Drawing.Size(326, 32);
-            this.tbNomeCadastro.TabIndex = 14;
+            this.tbNomeCadastro.TabIndex = 0;
             // 
             // tbCPFCadastro
             // 
             this.tbCPFCadastro.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbCPFCadastro.Location = new System.Drawing.Point(168, 103);
+            this.tbCPFCadastro.Location = new System.Drawing.Point(287, 109);
             this.tbCPFCadastro.Name = "tbCPFCadastro";
             this.tbCPFCadastro.Size = new System.Drawing.Size(326, 32);
-            this.tbCPFCadastro.TabIndex = 15;
+            this.tbCPFCadastro.TabIndex = 1;
             // 
             // tbEmailCadastro
             // 
             this.tbEmailCadastro.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbEmailCadastro.Location = new System.Drawing.Point(168, 193);
+            this.tbEmailCadastro.Location = new System.Drawing.Point(287, 199);
             this.tbEmailCadastro.Name = "tbEmailCadastro";
             this.tbEmailCadastro.Size = new System.Drawing.Size(326, 32);
-            this.tbEmailCadastro.TabIndex = 16;
+            this.tbEmailCadastro.TabIndex = 3;
             // 
             // tbSenhaCadastro
             // 
             this.tbSenhaCadastro.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbSenhaCadastro.Location = new System.Drawing.Point(168, 239);
+            this.tbSenhaCadastro.Location = new System.Drawing.Point(287, 245);
             this.tbSenhaCadastro.Name = "tbSenhaCadastro";
             this.tbSenhaCadastro.Size = new System.Drawing.Size(326, 32);
-            this.tbSenhaCadastro.TabIndex = 17;
+            this.tbSenhaCadastro.TabIndex = 4;
             // 
             // btCadastrar
             // 
             this.btCadastrar.BackColor = System.Drawing.Color.Blue;
             this.btCadastrar.Font = new System.Drawing.Font("Bauhaus 93", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btCadastrar.ForeColor = System.Drawing.Color.Transparent;
-            this.btCadastrar.Location = new System.Drawing.Point(358, 354);
+            this.btCadastrar.Location = new System.Drawing.Point(369, 354);
             this.btCadastrar.Name = "btCadastrar";
             this.btCadastrar.Size = new System.Drawing.Size(172, 47);
-            this.btCadastrar.TabIndex = 18;
+            this.btCadastrar.TabIndex = 6;
             this.btCadastrar.Text = "Cadastrar";
             this.btCadastrar.UseVisualStyleBackColor = false;
             this.btCadastrar.Click += new System.EventHandler(this.btCadastrar_Click);
@@ -173,20 +173,20 @@
             // tbCargo
             // 
             this.tbCargo.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbCargo.Location = new System.Drawing.Point(168, 284);
+            this.tbCargo.Location = new System.Drawing.Point(287, 290);
             this.tbCargo.Name = "tbCargo";
             this.tbCargo.Size = new System.Drawing.Size(326, 32);
-            this.tbCargo.TabIndex = 19;
+            this.tbCargo.TabIndex = 5;
             // 
             // btVoltar
             // 
             this.btVoltar.BackColor = System.Drawing.Color.Blue;
             this.btVoltar.Font = new System.Drawing.Font("Bauhaus 93", 10F);
             this.btVoltar.ForeColor = System.Drawing.Color.Transparent;
-            this.btVoltar.Location = new System.Drawing.Point(43, 368);
+            this.btVoltar.Location = new System.Drawing.Point(12, 405);
             this.btVoltar.Name = "btVoltar";
             this.btVoltar.Size = new System.Drawing.Size(88, 33);
-            this.btVoltar.TabIndex = 20;
+            this.btVoltar.TabIndex = 7;
             this.btVoltar.Text = "Voltar";
             this.btVoltar.UseVisualStyleBackColor = false;
             this.btVoltar.Click += new System.EventHandler(this.btVoltar_Click);
