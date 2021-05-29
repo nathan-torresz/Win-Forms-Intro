@@ -12,14 +12,16 @@ namespace Win_Forms_1
 {
     public partial class formRendaDiaria : Form
     {
-        public formRendaDiaria()
+        private FormInterface forminterface;
+        public formRendaDiaria(FormInterface forminterface)
         {
             InitializeComponent();
+            this.forminterface = forminterface;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            new FormInterface().Show();
+            forminterface.Show();
             this.Hide();
         }
     }

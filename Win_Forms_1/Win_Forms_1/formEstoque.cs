@@ -12,14 +12,16 @@ namespace Win_Forms_1
 {
     public partial class formEstoque : Form
     {
-        public formEstoque()
+        private FormInterface forminterface;
+        public formEstoque(FormInterface forminterface)
         {
             InitializeComponent();
+            this.forminterface = forminterface;
         }
 
         private void btVoltar_Click(object sender, EventArgs e)
         {
-            new FormInterface().Show();
+            forminterface.Show();
             this.Hide();
         }
     }

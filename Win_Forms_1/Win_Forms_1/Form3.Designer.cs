@@ -40,8 +40,8 @@
             this.tbEmailCadastro = new System.Windows.Forms.TextBox();
             this.tbSenhaCadastro = new System.Windows.Forms.TextBox();
             this.btCadastrar = new System.Windows.Forms.Button();
-            this.tbCargo = new System.Windows.Forms.TextBox();
             this.btVoltar = new System.Windows.Forms.Button();
+            this.cbCargo = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -170,14 +170,6 @@
             this.btCadastrar.UseVisualStyleBackColor = false;
             this.btCadastrar.Click += new System.EventHandler(this.btCadastrar_Click);
             // 
-            // tbCargo
-            // 
-            this.tbCargo.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbCargo.Location = new System.Drawing.Point(287, 290);
-            this.tbCargo.Name = "tbCargo";
-            this.tbCargo.Size = new System.Drawing.Size(326, 32);
-            this.tbCargo.TabIndex = 5;
-            // 
             // btVoltar
             // 
             this.btVoltar.BackColor = System.Drawing.Color.Blue;
@@ -191,6 +183,19 @@
             this.btVoltar.UseVisualStyleBackColor = false;
             this.btVoltar.Click += new System.EventHandler(this.btVoltar_Click);
             // 
+            // cbCargo
+            // 
+            this.cbCargo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbCargo.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbCargo.FormattingEnabled = true;
+            this.cbCargo.Items.AddRange(new object[] {
+            "Vendedor(a)",
+            "Gestor(a)"});
+            this.cbCargo.Location = new System.Drawing.Point(287, 293);
+            this.cbCargo.Name = "cbCargo";
+            this.cbCargo.Size = new System.Drawing.Size(326, 32);
+            this.cbCargo.TabIndex = 5;
+            // 
             // FormCadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -198,8 +203,8 @@
             this.BackgroundImage = global::Win_Forms_1.Properties.Resources.fundologin;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.cbCargo);
             this.Controls.Add(this.btVoltar);
-            this.Controls.Add(this.tbCargo);
             this.Controls.Add(this.btCadastrar);
             this.Controls.Add(this.tbSenhaCadastro);
             this.Controls.Add(this.tbEmailCadastro);
@@ -233,7 +238,7 @@
         private System.Windows.Forms.TextBox tbEmailCadastro;
         private System.Windows.Forms.TextBox tbSenhaCadastro;
         private System.Windows.Forms.Button btCadastrar;
-        private System.Windows.Forms.TextBox tbCargo;
         private System.Windows.Forms.Button btVoltar;
+        private System.Windows.Forms.ComboBox cbCargo;
     }
 }

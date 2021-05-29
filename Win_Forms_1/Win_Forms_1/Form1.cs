@@ -13,16 +13,21 @@ namespace Win_Forms_1
 {
     public partial class Form1 : Form
     {
+
+        private FormInterface forminterface;
+        private FormCadastro formcadastro;
+
         public Form1()
         {
             InitializeComponent();
+            forminterface = new FormInterface(this);
+            formcadastro = new FormCadastro(this);
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             Logar();
         }
-
         private void label3_Click(object sender, EventArgs e)
         {
             txtUserName.Clear();
@@ -46,7 +51,7 @@ namespace Win_Forms_1
             pictureBox5.Show();
             txtpassword2.Show();
             txtpassword2.Focus();
-        } 
+        }
         private void timer1_Tick(object sender, EventArgs e)
         {
             txtPassword.Text = txtpassword2.Text;
@@ -54,7 +59,7 @@ namespace Win_Forms_1
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            if(checkBox1.Checked) label1.Visible = true;
+            if (checkBox1.Checked) label1.Visible = true;
             else
             {
                 label1.Visible = false;
@@ -63,13 +68,13 @@ namespace Win_Forms_1
 
         private void label1_Click(object sender, EventArgs e)
         {
-            new FormCadastro().Show();
+            formcadastro.Show();
             this.Hide();
         }
 
-        SqlConnection conexao1 = new SqlConnection(Properties.Settings.Default.conexao);
-        string usuario;
-        string senha;
+       SqlConnection conexao1 = new SqlConnection(Properties.Settings.Default.conexao);
+       string usuario;
+       string senha;
 
         private void Logar()
         {
@@ -86,16 +91,28 @@ namespace Win_Forms_1
                     usuario = reader[0].ToString();
                     senha = reader[1].ToString();
                     conexao1.Close();
-                    if (usuario.Equals(txtUserName.Text)&& senha.Equals(txtpassword2.Text))
+                    if (usuario.Equals(txtUserName.Text) && senha.Equals(txtpassword2.Text))
                     {
-                        new FormInterface().Show();
+                        forminterface.Show();
                         this.Hide();
                     }
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show("Erro ao efetuar login!" + ex);
+                conexao1.Close();
+            }
+            finally
+            {
+                if (usuario != txtUserName.Text || senha != txtpassword2.Text)
+                {
+                    MessageBox.Show("Usuário ou senha incorretos!");
+                    txtpassword2.Clear();
+                    txtUserName.Clear();
+                    txtUserName.Focus();
+                    conexao1.Close();
+                }
             }
         }
     }

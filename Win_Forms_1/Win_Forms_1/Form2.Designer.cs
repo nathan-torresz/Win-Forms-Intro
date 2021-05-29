@@ -48,9 +48,9 @@
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = global::Win_Forms_1.Properties.Resources.open_512;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 72);
+            this.pictureBox1.Location = new System.Drawing.Point(89, 69);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(30, 33);
+            this.pictureBox1.Size = new System.Drawing.Size(30, 24);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -64,7 +64,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label2.Font = new System.Drawing.Font("Bodoni MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(32, 72);
+            this.label2.Location = new System.Drawing.Point(109, 69);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(155, 24);
             this.label2.TabIndex = 2;
@@ -78,7 +78,7 @@
             this.lbNomeFuncionario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbNomeFuncionario.Font = new System.Drawing.Font("Bauhaus 93", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbNomeFuncionario.ForeColor = System.Drawing.Color.Transparent;
-            this.lbNomeFuncionario.Location = new System.Drawing.Point(60, 25);
+            this.lbNomeFuncionario.Location = new System.Drawing.Point(89, 20);
             this.lbNomeFuncionario.Name = "lbNomeFuncionario";
             this.lbNomeFuncionario.Size = new System.Drawing.Size(164, 16);
             this.lbNomeFuncionario.TabIndex = 3;
@@ -91,7 +91,7 @@
             this.lbCargo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbCargo.Font = new System.Drawing.Font("Bauhaus 93", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbCargo.ForeColor = System.Drawing.Color.Transparent;
-            this.lbCargo.Location = new System.Drawing.Point(60, 48);
+            this.lbCargo.Location = new System.Drawing.Point(89, 43);
             this.lbCargo.Name = "lbCargo";
             this.lbCargo.Size = new System.Drawing.Size(55, 16);
             this.lbCargo.TabIndex = 4;
@@ -157,7 +157,7 @@
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label1.Font = new System.Drawing.Font("Bauhaus 93", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(276, 24);
+            this.label1.Location = new System.Drawing.Point(357, 48);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(481, 45);
             this.label1.TabIndex = 6;
@@ -170,7 +170,7 @@
             this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label3.Font = new System.Drawing.Font("Bauhaus 93", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Transparent;
-            this.label3.Location = new System.Drawing.Point(394, 145);
+            this.label3.Location = new System.Drawing.Point(475, 169);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(227, 45);
             this.label3.TabIndex = 7;
@@ -182,7 +182,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Win_Forms_1.Properties.Resources.fundologin;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(957, 615);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);

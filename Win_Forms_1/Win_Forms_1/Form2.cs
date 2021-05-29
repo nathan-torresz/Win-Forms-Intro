@@ -13,14 +13,22 @@ namespace Win_Forms_1
 {
     public partial class FormInterface : Form
     {
-        public FormInterface()
+        private Form1 form1;
+        private formEstoque formestoque;
+        private formVendas formvendas;
+        private formRendaDiaria formrenda;
+        public FormInterface(Form1 form1)
         {
             InitializeComponent();
+            this.form1 = form1;
+            formvendas = new formVendas(this);
+            formrenda = new formRendaDiaria(this);
+            formestoque = new formEstoque(this);
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            new Form1().Show();
+            form1.Show();
             this.Hide();
         }
 
@@ -38,19 +46,19 @@ namespace Win_Forms_1
 
         private void btvendas_Click(object sender, EventArgs e)
         {
-            new formVendas().Show();
+            formvendas.Show();
             this.Hide();
         }
 
         private void btRendaDiaria_Click(object sender, EventArgs e)
         {
-            new formRendaDiaria().Show();
+            formrenda.Show();
             this.Hide();
         }
 
         private void btEstoque_Click(object sender, EventArgs e)
         {
-            new formEstoque().Show();
+            formestoque.Show();
             this.Hide();
         }
     }

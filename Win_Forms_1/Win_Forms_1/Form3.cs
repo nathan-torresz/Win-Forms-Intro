@@ -13,9 +13,11 @@ namespace Win_Forms_1
 {
     public partial class FormCadastro : Form
     {
-        public FormCadastro()
+        private Form1 form1;
+        public FormCadastro(Form1 form1)
         {
             InitializeComponent();
+            this.form1 = form1;
         }
 
         private void btCadastrar_Click(object sender, EventArgs e)
@@ -26,9 +28,9 @@ namespace Win_Forms_1
             string telefone = tbTelefone.Text;
             string email = tbEmailCadastro.Text;
             string senha = tbSenhaCadastro.Text;
-            string cargo = tbCargo.Text;
+            string cargo = cbCargo.Text;
 
-            new Form1().Show();
+            form1.Show();
             this.Hide();
 
             try
@@ -47,7 +49,6 @@ namespace Win_Forms_1
                 tbTelefone.Clear();
                 tbEmailCadastro.Clear();
                 tbSenhaCadastro.Clear();
-                tbCargo.Clear();
                 tbNomeCadastro.Focus();
             }
         }
@@ -58,10 +59,9 @@ namespace Win_Forms_1
             tbCPFCadastro.Clear();
             tbTelefone.Clear();
             tbEmailCadastro.Clear();
-            tbSenhaCadastro.Clear();
-            tbCargo.Clear();
+            tbSenhaCadastro.Clear();    
             tbNomeCadastro.Focus();
-            new Form1().Show();
+            form1.Show();
             this.Hide();
         }
     }

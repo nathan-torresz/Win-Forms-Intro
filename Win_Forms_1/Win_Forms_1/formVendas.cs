@@ -12,14 +12,16 @@ namespace Win_Forms_1
 {
     public partial class formVendas : Form
     {
-        public formVendas()
+        private FormInterface forminterface;
+        public formVendas(FormInterface forminterface)
         {
             InitializeComponent();
+            this.forminterface = forminterface;
         }
 
         private void btVoltar_Click(object sender, EventArgs e)
         {
-            new FormInterface().Show();
+            forminterface.Show();
             this.Hide();
         }
     }
