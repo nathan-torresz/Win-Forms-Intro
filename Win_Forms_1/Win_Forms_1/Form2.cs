@@ -23,8 +23,10 @@ namespace Win_Forms_1
             this.form1 = form1;
             formvendas = new formVendas(this);
             formrenda = new formRendaDiaria(this);
-            formestoque = new formEstoque(this);
+            formestoque = new formEstoque(this, form1);
         }
+
+      
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
@@ -59,6 +61,7 @@ namespace Win_Forms_1
         private void btEstoque_Click(object sender, EventArgs e)
         {
             formestoque.Show();
+            formestoque.AtualizarListaEstoque();
             this.Hide();
         }
     }

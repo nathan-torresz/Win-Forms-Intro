@@ -35,9 +35,9 @@
             // 
             this.button1.BackColor = System.Drawing.Color.Blue;
             this.button1.ForeColor = System.Drawing.Color.Transparent;
-            this.button1.Location = new System.Drawing.Point(12, 384);
+            this.button1.Location = new System.Drawing.Point(12, 574);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(136, 54);
+            this.button1.Size = new System.Drawing.Size(71, 27);
             this.button1.TabIndex = 0;
             this.button1.Text = "Voltar";
             this.button1.UseVisualStyleBackColor = false;
@@ -47,7 +47,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(962, 613);
             this.Controls.Add(this.button1);
             this.Name = "formRendaDiaria";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

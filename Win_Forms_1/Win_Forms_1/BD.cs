@@ -19,7 +19,7 @@ namespace Win_Forms_1
             adapt = Inicializar();
             int i = 0;
             conexao.Open();
-            sql.ExecuteNonQuery();
+            i = sql.ExecuteNonQuery();
             conexao.Close();
             return i;
         }
@@ -39,6 +39,29 @@ namespace Win_Forms_1
             sql.Parameters.AddWithValue("@cargo", f.Cargo);
             int linhasAfetadas = Executar();
             return linhasAfetadas;
+        }
+        public static int InserirProduto(Produto p)
+        {
+            sql = new SqlCommand();
+            sql.CommandText = $"INSERT INTO Estoque (Numero, Nome_Produto, Marca_Produto, Descricao, Preco) " +
+                $"VALUES ('{p.NumeroProduto}','{p.NomeProduto}','{p.MarcaProduto}','{p.DescricaoProduto}','{p.PrecoProduto}')";
+            int linhasAfetadas = Executar();
+            return linhasAfetadas;
+        }
+
+        public static SqlDataAdapter SelectProdutosExceptID()
+        {
+            sql = new SqlCommand();
+            sql.CommandText = $"SELECT Numero, Nome_Produto, Marca_Produto, Descricao, Preco FROM Estoque";
+            int linhasAfetadas = Executar(out SqlDataAdapter adapt);
+            return adapt;
+        }
+        public static SqlDataAdapter SelectNumeroNomeProdutos()
+        {
+            sql = new SqlCommand();
+            sql.CommandText = $"SELECT Numero, Nome_Produto FROM Estoque";
+            int linhasAfetadas = Executar(out SqlDataAdapter adapt);
+            return adapt;
         }
     }
 }

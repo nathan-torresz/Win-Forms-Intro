@@ -71,6 +71,12 @@
     <Compile Include="formEstoque.Designer.cs">
       <DependentUpon>formEstoque.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormGestor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGestor.Designer.cs">
+      <DependentUpon>FormGestor.cs</DependentUpon>
+    </Compile>
     <Compile Include="formRendaDiaria.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +90,7 @@
       <DependentUpon>formVendas.cs</DependentUpon>
     </Compile>
     <Compile Include="Funcionario.cs" />
+    <Compile Include="Produto.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -97,6 +104,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="formEstoque.resx">
       <DependentUpon>formEstoque.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGestor.resx">
+      <DependentUpon>FormGestor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formRendaDiaria.resx">
       <DependentUpon>formRendaDiaria.cs</DependentUpon>

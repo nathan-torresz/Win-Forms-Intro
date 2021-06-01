@@ -35,9 +35,9 @@
             // 
             this.btVoltar.BackColor = System.Drawing.Color.Blue;
             this.btVoltar.ForeColor = System.Drawing.Color.Transparent;
-            this.btVoltar.Location = new System.Drawing.Point(12, 391);
+            this.btVoltar.Location = new System.Drawing.Point(12, 573);
             this.btVoltar.Name = "btVoltar";
-            this.btVoltar.Size = new System.Drawing.Size(119, 47);
+            this.btVoltar.Size = new System.Drawing.Size(60, 28);
             this.btVoltar.TabIndex = 0;
             this.btVoltar.Text = "Voltar";
             this.btVoltar.UseVisualStyleBackColor = false;
@@ -47,7 +47,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(962, 613);
             this.Controls.Add(this.btVoltar);
             this.Name = "formVendas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
