@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace Win_Forms_1
 {
@@ -21,7 +22,14 @@ namespace Win_Forms_1
 
         private void btVoltar_Click(object sender, EventArgs e)
         {
+            TempoFormInterface();
+        }
+        private void TempoFormInterface()
+        {
+            this.Cursor = Cursors.WaitCursor;
+            Thread.Sleep(500);
             forminterface.Show();
+            this.Cursor = Cursors.Default;
             this.Hide();
         }
     }

@@ -25,12 +25,16 @@ namespace Win_Forms_1
             formrenda = new formRendaDiaria(this);
             formestoque = new formEstoque(this, form1);
         }
-
-      
-
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+            TempoForm1();
+        }
+        private void TempoForm1()
+        {
+            this.Cursor = Cursors.WaitCursor;
+            Thread.Sleep(1000);
             form1.Show();
+            this.Cursor = Cursors.Default;
             this.Hide();
         }
 
@@ -48,20 +52,41 @@ namespace Win_Forms_1
 
         private void btvendas_Click(object sender, EventArgs e)
         {
+            TempoFormVendas();
+        }
+        private void TempoFormVendas()
+        {
+            this.Cursor = Cursors.WaitCursor;
+            Thread.Sleep(500);
             formvendas.Show();
+            this.Cursor = Cursors.Default;
             this.Hide();
         }
 
         private void btRendaDiaria_Click(object sender, EventArgs e)
         {
+            TempoFormRenda();
+        }
+        private void TempoFormRenda()
+        {
+            this.Cursor = Cursors.WaitCursor;
+            Thread.Sleep(500);
             formrenda.Show();
+            this.Cursor = Cursors.Default;
             this.Hide();
         }
 
         private void btEstoque_Click(object sender, EventArgs e)
         {
+            TempoFormEstoque();
+        }
+        private void TempoFormEstoque()
+        {
+            this.Cursor = Cursors.WaitCursor;
+            Thread.Sleep(500);
             formestoque.Show();
             formestoque.AtualizarListaEstoque();
+            this.Cursor = Cursors.Default;
             this.Hide();
         }
     }

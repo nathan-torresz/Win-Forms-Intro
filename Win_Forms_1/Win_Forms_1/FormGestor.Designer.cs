@@ -99,12 +99,15 @@
             // 
             // dgvListaProdutos
             // 
+            this.dgvListaProdutos.AllowUserToResizeColumns = false;
+            this.dgvListaProdutos.AllowUserToResizeRows = false;
+            this.dgvListaProdutos.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvListaProdutos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvListaProdutos.Location = new System.Drawing.Point(13, 119);
             this.dgvListaProdutos.Name = "dgvListaProdutos";
             this.dgvListaProdutos.RowHeadersWidth = 51;
             this.dgvListaProdutos.RowTemplate.Height = 24;
-            this.dgvListaProdutos.Size = new System.Drawing.Size(343, 442);
+            this.dgvListaProdutos.Size = new System.Drawing.Size(335, 442);
             this.dgvListaProdutos.TabIndex = 4;
             // 
             // textBox1
@@ -147,7 +150,6 @@
             this.btAdd.TabIndex = 10;
             this.btAdd.Text = "Adicionar";
             this.btAdd.UseVisualStyleBackColor = false;
-            this.btAdd.Click += new System.EventHandler(this.button1_Click);
             // 
             // btVoltar
             // 

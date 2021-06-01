@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Threading;
 
 namespace Win_Forms_1
 {
@@ -30,8 +31,7 @@ namespace Win_Forms_1
             string senha = tbSenhaCadastro.Text;
             string cargo = cbCargo.Text;
 
-            form1.Show();
-            this.Hide();
+            TempoFormCadastro();
 
             try
             {
@@ -52,6 +52,14 @@ namespace Win_Forms_1
                 tbNomeCadastro.Focus();
             }
         }
+        private void TempoFormCadastro()
+        {
+            this.Cursor = Cursors.WaitCursor;
+            Thread.Sleep(500);
+            form1.Show();
+            this.Cursor = Cursors.Default;
+            this.Hide();
+        }
 
         private void btVoltar_Click(object sender, EventArgs e)
         {
@@ -61,7 +69,14 @@ namespace Win_Forms_1
             tbEmailCadastro.Clear();
             tbSenhaCadastro.Clear();    
             tbNomeCadastro.Focus();
+            TempoForm1();
+        }
+        private void TempoForm1()
+        {
+            this.Cursor = Cursors.WaitCursor;
+            Thread.Sleep(1000);
             form1.Show();
+            this.Cursor = Cursors.Default;
             this.Hide();
         }
     }

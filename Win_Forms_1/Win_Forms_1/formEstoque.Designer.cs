@@ -56,6 +56,8 @@
             // 
             // dgvListaProdutos
             // 
+            this.dgvListaProdutos.AllowUserToResizeColumns = false;
+            this.dgvListaProdutos.AllowUserToResizeRows = false;
             this.dgvListaProdutos.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvListaProdutos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvListaProdutos.Location = new System.Drawing.Point(13, 175);

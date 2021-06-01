@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Threading;
 
 namespace Win_Forms_1
 {
@@ -51,14 +52,11 @@ namespace Win_Forms_1
                     conexao1.Close();
                     if (usuario.Equals(txtUserName.Text) && senha.Equals(txtpassword2.Text) && rbVendedor.Checked)
                     {
-                        forminterface.Show();
-                        this.Hide();
+                        TempoFormInterface();
                     }
                     if(usuario.Equals(txtUserName.Text) && senha.Equals(txtpassword2.Text) && rbGestor.Checked)
                     {
-                        formgestor.Show();
-                        forminterface.Hide();
-                        this.Hide();
+                        TempoFormGestor();
                     }
                 }
             }
@@ -78,6 +76,23 @@ namespace Win_Forms_1
                     conexao1.Close();
                 }
             }
+        }
+        private void TempoFormInterface()
+        {
+            this.Cursor = Cursors.WaitCursor;
+            Thread.Sleep(1000);
+            forminterface.Show();
+            this.Cursor = Cursors.Default;
+            this.Hide();
+        }
+        private void TempoFormGestor()
+        {
+            this.Cursor = Cursors.WaitCursor;
+            Thread.Sleep(1000);
+            formgestor.Show();
+            this.Cursor = Cursors.Default;
+            forminterface.Hide();
+            this.Hide();
         }
         private void label3_Click(object sender, EventArgs e)
         {

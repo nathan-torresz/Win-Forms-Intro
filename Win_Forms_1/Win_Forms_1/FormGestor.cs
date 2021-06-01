@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Threading;
 
 namespace Win_Forms_1
 {
@@ -18,11 +19,6 @@ namespace Win_Forms_1
         {
             InitializeComponent();
             this.form1 = form1;
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
         }
 
         public void AtualizarProdutos()
@@ -50,7 +46,14 @@ namespace Win_Forms_1
 
         private void btVoltar_Click(object sender, EventArgs e)
         {
+            TempoForm1();
+        }
+        private void TempoForm1()
+        {
+            this.Cursor = Cursors.WaitCursor;
+            Thread.Sleep(500);
             form1.Show();
+            this.Cursor = Cursors.Default;
             this.Hide();
         }
 
