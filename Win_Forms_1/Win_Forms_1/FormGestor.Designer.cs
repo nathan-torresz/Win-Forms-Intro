@@ -33,10 +33,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.dgvListaProdutos = new System.Windows.Forms.DataGridView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.tbNumero = new System.Windows.Forms.TextBox();
+            this.tbNome = new System.Windows.Forms.TextBox();
+            this.tbMarca = new System.Windows.Forms.TextBox();
+            this.tbDescricao = new System.Windows.Forms.TextBox();
             this.btAdd = new System.Windows.Forms.Button();
             this.btVoltar = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
@@ -45,7 +45,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.mbPreco = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaProdutos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -110,33 +110,33 @@
             this.dgvListaProdutos.Size = new System.Drawing.Size(335, 442);
             this.dgvListaProdutos.TabIndex = 4;
             // 
-            // textBox1
+            // tbNumero
             // 
-            this.textBox1.Location = new System.Drawing.Point(521, 237);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(222, 22);
-            this.textBox1.TabIndex = 5;
+            this.tbNumero.Location = new System.Drawing.Point(521, 237);
+            this.tbNumero.Name = "tbNumero";
+            this.tbNumero.Size = new System.Drawing.Size(222, 22);
+            this.tbNumero.TabIndex = 5;
             // 
-            // textBox2
+            // tbNome
             // 
-            this.textBox2.Location = new System.Drawing.Point(521, 287);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(222, 22);
-            this.textBox2.TabIndex = 6;
+            this.tbNome.Location = new System.Drawing.Point(521, 287);
+            this.tbNome.Name = "tbNome";
+            this.tbNome.Size = new System.Drawing.Size(222, 22);
+            this.tbNome.TabIndex = 6;
             // 
-            // textBox3
+            // tbMarca
             // 
-            this.textBox3.Location = new System.Drawing.Point(521, 338);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(222, 22);
-            this.textBox3.TabIndex = 7;
+            this.tbMarca.Location = new System.Drawing.Point(521, 338);
+            this.tbMarca.Name = "tbMarca";
+            this.tbMarca.Size = new System.Drawing.Size(222, 22);
+            this.tbMarca.TabIndex = 7;
             // 
-            // textBox5
+            // tbDescricao
             // 
-            this.textBox5.Location = new System.Drawing.Point(521, 390);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(222, 22);
-            this.textBox5.TabIndex = 9;
+            this.tbDescricao.Location = new System.Drawing.Point(521, 390);
+            this.tbDescricao.Name = "tbDescricao";
+            this.tbDescricao.Size = new System.Drawing.Size(222, 22);
+            this.tbDescricao.TabIndex = 9;
             // 
             // btAdd
             // 
@@ -150,6 +150,7 @@
             this.btAdd.TabIndex = 10;
             this.btAdd.Text = "Adicionar";
             this.btAdd.UseVisualStyleBackColor = false;
+            this.btAdd.Click += new System.EventHandler(this.btAdd_Click);
             // 
             // btVoltar
             // 
@@ -237,12 +238,12 @@
             this.label10.TabIndex = 17;
             this.label10.Text = "Preço:";
             // 
-            // maskedTextBox1
+            // mbPreco
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(521, 440);
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(148, 22);
-            this.maskedTextBox1.TabIndex = 18;
+            this.mbPreco.Location = new System.Drawing.Point(521, 440);
+            this.mbPreco.Name = "mbPreco";
+            this.mbPreco.Size = new System.Drawing.Size(148, 22);
+            this.mbPreco.TabIndex = 18;
             // 
             // FormGestor
             // 
@@ -250,7 +251,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Win_Forms_1.Properties.Resources.fundologin;
             this.ClientSize = new System.Drawing.Size(962, 613);
-            this.Controls.Add(this.maskedTextBox1);
+            this.Controls.Add(this.mbPreco);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -259,10 +260,10 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btVoltar);
             this.Controls.Add(this.btAdd);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbDescricao);
+            this.Controls.Add(this.tbMarca);
+            this.Controls.Add(this.tbNome);
+            this.Controls.Add(this.tbNumero);
             this.Controls.Add(this.dgvListaProdutos);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -285,10 +286,10 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView dgvListaProdutos;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox tbNumero;
+        private System.Windows.Forms.TextBox tbNome;
+        private System.Windows.Forms.TextBox tbMarca;
+        private System.Windows.Forms.TextBox tbDescricao;
         private System.Windows.Forms.Button btAdd;
         private System.Windows.Forms.Button btVoltar;
         private System.Windows.Forms.Label label5;
@@ -297,6 +298,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox mbPreco;
     }
 }

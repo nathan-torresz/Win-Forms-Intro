@@ -61,5 +61,34 @@ namespace Win_Forms_1
         {
             AtualizarProdutos();
         }
+
+        private void btAdd_Click(object sender, EventArgs e)
+        {
+            int i = 0;
+            string nome = tbNome.Text;
+            string numero = tbNumero.Text;
+            string descricao = tbDescricao.Text;
+            string marca = tbMarca.Text;
+            string preco = mbPreco.Text;
+
+            try
+            {
+               i = BD.InserirProduto(new Produto(numero, nome, marca, descricao, preco));
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Erro ao adicionar produto!" + ex);
+            }
+            finally
+            {
+                MessageBox.Show("Produto cadastrado com sucesso!");
+                AtualizarProdutos();
+                tbNome.Clear();
+                tbNumero.Clear();
+                tbDescricao.Clear();
+                tbMarca.Clear();
+                mbPreco.Clear();
+            }
+        }
     }
 }

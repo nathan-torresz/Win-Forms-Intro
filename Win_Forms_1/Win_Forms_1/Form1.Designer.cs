@@ -48,6 +48,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.rbGestor = new System.Windows.Forms.RadioButton();
             this.rbVendedor = new System.Windows.Forms.RadioButton();
+            this.btSobreNos = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -289,6 +290,22 @@
             this.rbVendedor.Text = "Vendedor";
             this.rbVendedor.UseVisualStyleBackColor = false;
             // 
+            // btSobreNos
+            // 
+            this.btSobreNos.BackColor = System.Drawing.Color.Transparent;
+            this.btSobreNos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btSobreNos.FlatAppearance.BorderSize = 0;
+            this.btSobreNos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btSobreNos.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btSobreNos.ForeColor = System.Drawing.Color.Transparent;
+            this.btSobreNos.Location = new System.Drawing.Point(753, 427);
+            this.btSobreNos.Name = "btSobreNos";
+            this.btSobreNos.Size = new System.Drawing.Size(35, 34);
+            this.btSobreNos.TabIndex = 18;
+            this.btSobreNos.Text = "?";
+            this.btSobreNos.UseVisualStyleBackColor = false;
+            this.btSobreNos.Click += new System.EventHandler(this.btSobreNos_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -297,6 +314,7 @@
             this.BackgroundImage = global::Win_Forms_1.Properties.Resources.fundologin;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 479);
+            this.Controls.Add(this.btSobreNos);
             this.Controls.Add(this.rbVendedor);
             this.Controls.Add(this.rbGestor);
             this.Controls.Add(this.label1);
@@ -349,6 +367,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.RadioButton rbGestor;
         private System.Windows.Forms.RadioButton rbVendedor;
+        private System.Windows.Forms.Button btSobreNos;
     }
 }
 

@@ -20,7 +20,6 @@ namespace Win_Forms_1
             InitializeComponent();
             this.form1 = form1;
         }
-
         private void btCadastrar_Click(object sender, EventArgs e)
         {
             int i = 0;
