@@ -34,12 +34,10 @@ namespace Win_Forms_1
         SqlConnection conexao1 = new SqlConnection(Properties.Settings.Default.conexao);
         string usuario;
         string senha;
-        string cargo;
-        string vend = "'Vendedor'";
 
         private void Logar()
         {
-            string login = "SELECT Nome, Senha, Cargo FROM Usuario WHERE Nome= '" + txtUserName.Text + "' AND Senha='" + txtpassword2.Text + "' AND Cargo= '"+cargo+"'";
+            string login = "SELECT Nome, Senha FROM Usuario WHERE Nome= '" + txtUserName.Text + "' AND Senha='" + txtpassword2.Text + "' ";
             SqlCommand comando = new SqlCommand(login, conexao1);
             comando.CommandType = CommandType.Text;
             SqlDataReader reader;
@@ -52,10 +50,9 @@ namespace Win_Forms_1
                 {
                     usuario = reader[0].ToString();
                     senha = reader[1].ToString();
-                    cargo = reader[2].ToString();
                     conexao1.Close();
 
-                    if (usuario.Equals(txtUserName.Text) && senha.Equals(txtpassword2.Text) && cargo.Equals(vend));
+                    if (usuario.Equals(txtUserName.Text) && senha.Equals(txtpassword2.Text));
                     {
                         TempoFormInterface();
                     }
