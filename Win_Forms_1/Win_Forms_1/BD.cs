@@ -64,18 +64,12 @@ namespace Win_Forms_1
             return adapt;
         }
 
-        public static SqlDataAdapter VerificarSeVendedor(string usuario)
+        public static SqlDataAdapter Logar(string usuario, string senha)
         {
             sql = new SqlCommand();
-            sql.CommandText = $"SELECT Cargo FROM Usuario WHERE Cargo= 'Vendedor' AND Nome= '{usuario}'";
-            int linhaAfetada = Executar(out SqlDataAdapter adapt);
-            return adapt;
-        }
-        public static SqlDataAdapter VerificarSeGestor(string usuario)
-        {
-            sql = new SqlCommand();
-            sql.CommandText = $"SELECT Cargo FROM Usuario WHERE Cargo= 'Gestor' AND Nome= '{usuario}'";
-            int linhaAfetada = Executar(out SqlDataAdapter adapt);
+            sql.CommandText = $"SELECT Nome, Senha FROM Usuario " +
+                $"WHERE Nome= '{usuario}' AND Senha= '{senha}' ";
+            int linhasAfetadas = Executar(out SqlDataAdapter adapt);
             return adapt;
         }
     }

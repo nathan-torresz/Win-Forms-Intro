@@ -46,8 +46,6 @@
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.rbGestor = new System.Windows.Forms.RadioButton();
-            this.rbVendedor = new System.Windows.Forms.RadioButton();
             this.btSobreNos = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -92,7 +90,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Bahnschrift", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Transparent;
-            this.button1.Location = new System.Drawing.Point(184, 394);
+            this.button1.Location = new System.Drawing.Point(184, 382);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(429, 43);
             this.button1.TabIndex = 3;
@@ -108,7 +106,7 @@
             this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label3.Font = new System.Drawing.Font("Bahnschrift", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Navy;
-            this.label3.Location = new System.Drawing.Point(511, 370);
+            this.label3.Location = new System.Drawing.Point(511, 358);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(102, 21);
             this.label3.TabIndex = 2;
@@ -123,7 +121,7 @@
             this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label4.Font = new System.Drawing.Font("Bahnschrift", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Navy;
-            this.label4.Location = new System.Drawing.Point(378, 440);
+            this.label4.Location = new System.Drawing.Point(378, 428);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(39, 21);
             this.label4.TabIndex = 4;
@@ -260,36 +258,6 @@
             this.label1.Visible = false;
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // rbGestor
-            // 
-            this.rbGestor.AutoSize = true;
-            this.rbGestor.BackColor = System.Drawing.Color.Transparent;
-            this.rbGestor.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.rbGestor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rbGestor.ForeColor = System.Drawing.Color.Navy;
-            this.rbGestor.Location = new System.Drawing.Point(276, 339);
-            this.rbGestor.Name = "rbGestor";
-            this.rbGestor.Size = new System.Drawing.Size(146, 21);
-            this.rbGestor.TabIndex = 16;
-            this.rbGestor.Text = "Gestor de estoque";
-            this.rbGestor.UseVisualStyleBackColor = false;
-            // 
-            // rbVendedor
-            // 
-            this.rbVendedor.AutoSize = true;
-            this.rbVendedor.BackColor = System.Drawing.Color.Transparent;
-            this.rbVendedor.Checked = true;
-            this.rbVendedor.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.rbVendedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rbVendedor.ForeColor = System.Drawing.Color.Navy;
-            this.rbVendedor.Location = new System.Drawing.Point(441, 339);
-            this.rbVendedor.Name = "rbVendedor";
-            this.rbVendedor.Size = new System.Drawing.Size(90, 21);
-            this.rbVendedor.TabIndex = 17;
-            this.rbVendedor.TabStop = true;
-            this.rbVendedor.Text = "Vendedor";
-            this.rbVendedor.UseVisualStyleBackColor = false;
-            // 
             // btSobreNos
             // 
             this.btSobreNos.BackColor = System.Drawing.Color.Transparent;
@@ -315,8 +283,6 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 479);
             this.Controls.Add(this.btSobreNos);
-            this.Controls.Add(this.rbVendedor);
-            this.Controls.Add(this.rbGestor);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.pictureBox5);
@@ -365,8 +331,6 @@
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.RadioButton rbGestor;
-        private System.Windows.Forms.RadioButton rbVendedor;
         private System.Windows.Forms.Button btSobreNos;
     }
 }
