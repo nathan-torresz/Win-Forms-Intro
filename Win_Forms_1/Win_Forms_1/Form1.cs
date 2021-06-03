@@ -52,7 +52,7 @@ namespace Win_Forms_1
                     senha = reader[1].ToString();
                     conexao1.Close();
 
-                    if (usuario.Equals(txtUserName.Text) && senha.Equals(txtpassword2.Text));
+                    if (usuario.Equals(txtUserName.Text) && senha.Equals(txtpassword2.Text)) 
                     {
                         TempoFormInterface();
                     }

@@ -67,8 +67,8 @@ namespace Win_Forms_1
         public static SqlDataAdapter Logar(string usuario, string senha)
         {
             sql = new SqlCommand();
-            sql.CommandText = $"SELECT Nome, Senha FROM Usuario " +
-                $"WHERE Nome= '{usuario}' AND Senha= '{senha}' ";
+            sql.CommandText = $"SELECT Nome, Senha, Cargo FROM Usuario " +
+                $"WHERE Nome= '{usuario}' AND Senha= '{senha}' AND Cargo= 'Vendedor'";
             int linhasAfetadas = Executar(out SqlDataAdapter adapt);
             return adapt;
         }
