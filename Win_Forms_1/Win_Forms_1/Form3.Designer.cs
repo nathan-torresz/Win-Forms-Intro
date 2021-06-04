@@ -159,7 +159,7 @@
             // 
             // btCadastrar
             // 
-            this.btCadastrar.BackColor = System.Drawing.Color.Blue;
+            this.btCadastrar.BackColor = System.Drawing.Color.Indigo;
             this.btCadastrar.Font = new System.Drawing.Font("Bauhaus 93", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btCadastrar.ForeColor = System.Drawing.Color.Transparent;
             this.btCadastrar.Location = new System.Drawing.Point(369, 354);
@@ -172,7 +172,7 @@
             // 
             // btVoltar
             // 
-            this.btVoltar.BackColor = System.Drawing.Color.Blue;
+            this.btVoltar.BackColor = System.Drawing.Color.Indigo;
             this.btVoltar.Font = new System.Drawing.Font("Bauhaus 93", 10F);
             this.btVoltar.ForeColor = System.Drawing.Color.Transparent;
             this.btVoltar.Location = new System.Drawing.Point(12, 405);

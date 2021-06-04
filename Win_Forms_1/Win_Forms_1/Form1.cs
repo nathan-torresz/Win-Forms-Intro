@@ -28,20 +28,24 @@ namespace Win_Forms_1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Logar();
+            Logar1();
+        }
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Logar2();
         }
 
         SqlConnection conexao1 = new SqlConnection(Properties.Settings.Default.conexao);
         string usuario;
         string senha;
 
-        private void Logar()
+        private void Logar1()
         {
-            string login = "SELECT Nome, Senha FROM Usuario WHERE Nome= '" + txtUserName.Text + "' AND Senha='" + txtpassword2.Text + "' ";
+            string login = "SELECT Nome, Senha, Cargo FROM Usuario WHERE Nome= '" + txtUserName.Text + "' AND Senha='" + txtpassword2.Text + "' " +
+                "AND Cargo= 'Vendedor'";
             SqlCommand comando = new SqlCommand(login, conexao1);
             comando.CommandType = CommandType.Text;
             SqlDataReader reader;
-
             try
             {
                 conexao1.Open();
@@ -52,9 +56,49 @@ namespace Win_Forms_1
                     senha = reader[1].ToString();
                     conexao1.Close();
 
-                    if (usuario.Equals(txtUserName.Text) && senha.Equals(txtpassword2.Text)) 
+                    if (usuario.Equals(txtUserName.Text) && senha.Equals(txtpassword2.Text))
                     {
                         TempoFormInterface();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao efetuar login!" + ex);
+                conexao1.Close();
+            }
+            finally
+            {
+                if (usuario != txtUserName.Text || senha != txtpassword2.Text)
+                {
+                    MessageBox.Show("Usuário ou senha incorretos!");
+                    txtpassword2.Clear();
+                    txtUserName.Clear();
+                    txtUserName.Focus();
+                    conexao1.Close();
+                }
+            }
+        }
+        private void Logar2()
+        {
+            string login = "SELECT Nome, Senha, Cargo FROM Usuario WHERE Nome= '" + txtUserName.Text + "' AND Senha='" + txtpassword2.Text + "' " +
+                "AND Cargo= 'Gestor(a)'";
+            SqlCommand comando = new SqlCommand(login, conexao1);
+            comando.CommandType = CommandType.Text;
+            SqlDataReader reader;
+            try
+            {
+                conexao1.Open();
+                reader = comando.ExecuteReader();
+                if (reader.Read())
+                {
+                    usuario = reader[0].ToString();
+                    senha = reader[1].ToString();
+                    conexao1.Close();
+
+                    if (usuario.Equals(txtUserName.Text) && senha.Equals(txtpassword2.Text))
+                    {
+                        TempoFormGestor();
                     }
                 }
             }
@@ -173,5 +217,7 @@ namespace Win_Forms_1
                 formBackGround.Dispose();
             }
         }
+
+        
     }
 }
