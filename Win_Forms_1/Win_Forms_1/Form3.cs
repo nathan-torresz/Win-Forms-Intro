@@ -24,14 +24,20 @@ namespace Win_Forms_1
         {
             int i = 0;
             string nome = tbNomeCadastro.Text;
-            string cpf = tbCPFCadastro.Text;
+            string cpf = mbCpf.Text;
             string telefone = tbTelefone.Text;
             string email = tbEmailCadastro.Text;
             string senha = tbSenhaCadastro.Text;
             string cargo = cbCargo.Text;
 
+            string estabelecimento = txtEstabelecimento.Text;
+
             TempoFormCadastro();
 
+            if(estabelecimento != null)
+            {
+                txtEstabelecimento.Enabled = false;
+            }
             try
             {
                 i = BD.InserirFuncionario(new Funcionario(nome,cpf,telefone,email,senha,cargo));
@@ -44,7 +50,7 @@ namespace Win_Forms_1
             {
                 MessageBox.Show($"Cadastro de {tbNomeCadastro.Text} efetuado com sucesso!");
                 tbNomeCadastro.Clear();
-                tbCPFCadastro.Clear();
+                mbCpf.Clear();
                 tbTelefone.Clear();
                 tbEmailCadastro.Clear();
                 tbSenhaCadastro.Clear();
@@ -63,7 +69,7 @@ namespace Win_Forms_1
         private void btVoltar_Click(object sender, EventArgs e)
         {
             tbNomeCadastro.Clear();
-            tbCPFCadastro.Clear();
+            mbCpf.Clear();
             tbTelefone.Clear();
             tbEmailCadastro.Clear();
             tbSenhaCadastro.Clear();    

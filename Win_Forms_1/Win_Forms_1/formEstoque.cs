@@ -62,6 +62,7 @@ namespace Win_Forms_1
         private void button1_Click(object sender, EventArgs e)
         {
             TempoForm1();
+            form1.txtpassword2.Text = "";
         }
         private void TempoForm1()
         {

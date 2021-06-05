@@ -31,8 +31,8 @@
             this.btVoltar = new System.Windows.Forms.Button();
             this.dgvListaProdutos = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lbNomeFuncionario = new System.Windows.Forms.Label();
+            this.lbCargo = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -80,31 +80,31 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "ESTOQUE";
             // 
-            // label2
+            // lbNomeFuncionario
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label2.Font = new System.Drawing.Font("Bauhaus 93", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(80, 18);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(167, 23);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Nome funcionario";
+            this.lbNomeFuncionario.AutoSize = true;
+            this.lbNomeFuncionario.BackColor = System.Drawing.Color.Transparent;
+            this.lbNomeFuncionario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lbNomeFuncionario.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNomeFuncionario.ForeColor = System.Drawing.Color.Transparent;
+            this.lbNomeFuncionario.Location = new System.Drawing.Point(80, 18);
+            this.lbNomeFuncionario.Name = "lbNomeFuncionario";
+            this.lbNomeFuncionario.Size = new System.Drawing.Size(169, 24);
+            this.lbNomeFuncionario.TabIndex = 3;
+            this.lbNomeFuncionario.Text = "Nome funcionario";
             // 
-            // label3
+            // lbCargo
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label3.Font = new System.Drawing.Font("Bauhaus 93", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Transparent;
-            this.label3.Location = new System.Drawing.Point(80, 41);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(66, 23);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Cargo";
+            this.lbCargo.AutoSize = true;
+            this.lbCargo.BackColor = System.Drawing.Color.Transparent;
+            this.lbCargo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lbCargo.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCargo.ForeColor = System.Drawing.Color.Transparent;
+            this.lbCargo.Location = new System.Drawing.Point(80, 41);
+            this.lbCargo.Name = "lbCargo";
+            this.lbCargo.Size = new System.Drawing.Size(64, 24);
+            this.lbCargo.TabIndex = 4;
+            this.lbCargo.Text = "Cargo";
             // 
             // pictureBox1
             // 
@@ -124,7 +124,7 @@
             this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label4.Font = new System.Drawing.Font("Bauhaus 93", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Transparent;
-            this.label4.Location = new System.Drawing.Point(115, 79);
+            this.label4.Location = new System.Drawing.Point(223, 53);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(528, 45);
             this.label4.TabIndex = 6;
@@ -154,8 +154,8 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lbCargo);
+            this.Controls.Add(this.lbNomeFuncionario);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvListaProdutos);
             this.Controls.Add(this.btVoltar);
@@ -174,10 +174,10 @@
         private System.Windows.Forms.Button btVoltar;
         private System.Windows.Forms.DataGridView dgvListaProdutos;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button1;
+        public System.Windows.Forms.Label lbNomeFuncionario;
+        public System.Windows.Forms.Label lbCargo;
     }
 }

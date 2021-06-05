@@ -33,8 +33,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lbNomeFuncionario = new System.Windows.Forms.Label();
+            this.lbCargo = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRendaDiaria)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -45,7 +45,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Bauhaus 93", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Transparent;
-            this.button1.Location = new System.Drawing.Point(12, 513);
+            this.button1.Location = new System.Drawing.Point(12, 467);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(74, 36);
             this.button1.TabIndex = 0;
@@ -56,11 +56,11 @@
             // dgvRendaDiaria
             // 
             this.dgvRendaDiaria.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvRendaDiaria.Location = new System.Drawing.Point(93, 279);
+            this.dgvRendaDiaria.Location = new System.Drawing.Point(12, 187);
             this.dgvRendaDiaria.Name = "dgvRendaDiaria";
             this.dgvRendaDiaria.RowHeadersWidth = 51;
             this.dgvRendaDiaria.RowTemplate.Height = 24;
-            this.dgvRendaDiaria.Size = new System.Drawing.Size(785, 195);
+            this.dgvRendaDiaria.Size = new System.Drawing.Size(785, 274);
             this.dgvRendaDiaria.TabIndex = 1;
             // 
             // label1
@@ -69,7 +69,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Bauhaus 93", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(318, 189);
+            this.label1.Location = new System.Drawing.Point(263, 139);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(259, 45);
             this.label1.TabIndex = 2;
@@ -81,7 +81,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Bauhaus 93", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(206, 92);
+            this.label2.Location = new System.Drawing.Point(300, 22);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(478, 45);
             this.label2.TabIndex = 3;
@@ -98,38 +98,38 @@
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
-            // label3
+            // lbNomeFuncionario
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Bauhaus 93", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Transparent;
-            this.label3.Location = new System.Drawing.Point(106, 13);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(167, 23);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Nome funcionário";
+            this.lbNomeFuncionario.AutoSize = true;
+            this.lbNomeFuncionario.BackColor = System.Drawing.Color.Transparent;
+            this.lbNomeFuncionario.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNomeFuncionario.ForeColor = System.Drawing.Color.Transparent;
+            this.lbNomeFuncionario.Location = new System.Drawing.Point(106, 13);
+            this.lbNomeFuncionario.Name = "lbNomeFuncionario";
+            this.lbNomeFuncionario.Size = new System.Drawing.Size(169, 24);
+            this.lbNomeFuncionario.TabIndex = 5;
+            this.lbNomeFuncionario.Text = "Nome funcionário";
             // 
-            // label4
+            // lbCargo
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Bauhaus 93", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Transparent;
-            this.label4.Location = new System.Drawing.Point(106, 43);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(66, 23);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Cargo";
+            this.lbCargo.AutoSize = true;
+            this.lbCargo.BackColor = System.Drawing.Color.Transparent;
+            this.lbCargo.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCargo.ForeColor = System.Drawing.Color.Transparent;
+            this.lbCargo.Location = new System.Drawing.Point(106, 43);
+            this.lbCargo.Name = "lbCargo";
+            this.lbCargo.Size = new System.Drawing.Size(64, 24);
+            this.lbCargo.TabIndex = 6;
+            this.lbCargo.Text = "Cargo";
             // 
             // formRendaDiaria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Win_Forms_1.Properties.Resources.fundologin;
-            this.ClientSize = new System.Drawing.Size(962, 561);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
+            this.ClientSize = new System.Drawing.Size(810, 515);
+            this.Controls.Add(this.lbCargo);
+            this.Controls.Add(this.lbNomeFuncionario);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -152,7 +152,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        public System.Windows.Forms.Label lbNomeFuncionario;
+        public System.Windows.Forms.Label lbCargo;
     }
 }

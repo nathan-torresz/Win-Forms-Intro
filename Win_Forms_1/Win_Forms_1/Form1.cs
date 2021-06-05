@@ -29,20 +29,35 @@ namespace Win_Forms_1
         private void button1_Click(object sender, EventArgs e)
         {
             Logar1();
+            AtualizarNomeVendedor();
+            AtualizarNomeEstabelecimento();
+        }
+        private void AtualizarNomeEstabelecimento()
+        {
+            forminterface.lbEstabelecimento.Text = formcadastro.txtEstabelecimento.Text;
+        }
+        private void AtualizarNomeVendedor()
+        {
+            forminterface.lbNomeFuncionario.Text = txtUserName.Text;
+            forminterface.lbCargo.Text = "Vendedor(a)";
         }
         private void button2_Click(object sender, EventArgs e)
         {
             Logar2();
+            AtualizarNomeGestor();
+        }
+        private void AtualizarNomeGestor()
+        {
+            formgestor.lbNomeFuncionario.Text = txtUserName.Text;
+            formgestor.lbCargo.Text = "Gestor(a)";
         }
 
         SqlConnection conexao1 = new SqlConnection(Properties.Settings.Default.conexao);
         string usuario;
         string senha;
-
         private void Logar1()
         {
-            string login = "SELECT Nome, Senha, Cargo FROM Usuario WHERE Nome= '" + txtUserName.Text + "' AND Senha='" + txtpassword2.Text + "' " +
-                "AND Cargo= 'Vendedor'";
+            string login = $"SELECT Nome, Senha, Cargo FROM Usuario WHERE Nome= '{txtUserName.Text}' AND Senha= '{txtpassword2.Text}' AND Cargo= 'Vendedor(a)'";
             SqlCommand comando = new SqlCommand(login, conexao1);
             comando.CommandType = CommandType.Text;
             SqlDataReader reader;
@@ -81,8 +96,7 @@ namespace Win_Forms_1
         }
         private void Logar2()
         {
-            string login = "SELECT Nome, Senha, Cargo FROM Usuario WHERE Nome= '" + txtUserName.Text + "' AND Senha='" + txtpassword2.Text + "' " +
-                "AND Cargo= 'Gestor(a)'";
+            string login = $"SELECT Nome, Senha, Cargo FROM Usuario WHERE Nome= '{txtUserName.Text}' AND Senha= '{txtpassword2.Text}' AND Cargo= 'Gestor(a)'";
             SqlCommand comando = new SqlCommand(login, conexao1);
             comando.CommandType = CommandType.Text;
             SqlDataReader reader;
@@ -119,7 +133,6 @@ namespace Win_Forms_1
                 }
             }
         }
-
         private void TempoFormInterface()
         {
             this.Cursor = Cursors.WaitCursor;

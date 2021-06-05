@@ -47,6 +47,8 @@ namespace Win_Forms_1
         private void btVoltar_Click(object sender, EventArgs e)
         {
             TempoForm1();
+            form1.txtUserName.Text = "";
+            form1.txtpassword2.Text = "";
         }
         private void TempoForm1()
         {
@@ -89,6 +91,11 @@ namespace Win_Forms_1
                 tbMarca.Clear();
                 mbPreco.Clear();
             }
+        }
+
+        private void lbCargo_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

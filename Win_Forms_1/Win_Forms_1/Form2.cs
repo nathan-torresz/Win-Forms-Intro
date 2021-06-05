@@ -28,7 +28,11 @@ namespace Win_Forms_1
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             TempoForm1();
+            form1.txtUserName.Text = "";
+            form1.txtUserName.Focus();
+            form1.txtpassword2.Text = "";
         }
+
         private void TempoForm1()
         {
             this.Cursor = Cursors.WaitCursor;
@@ -66,6 +70,12 @@ namespace Win_Forms_1
         private void btRendaDiaria_Click(object sender, EventArgs e)
         {
             TempoFormRenda();
+            AtualizarNomeVendedor();
+        }
+        private void AtualizarNomeVendedor()
+        {
+            formrenda.lbNomeFuncionario.Text = form1.txtUserName.Text;
+            formrenda.lbCargo.Text = "Vendedor(a)";
         }
         private void TempoFormRenda()
         {
@@ -79,6 +89,12 @@ namespace Win_Forms_1
         private void btEstoque_Click(object sender, EventArgs e)
         {
             TempoFormEstoque();
+            AtualizarNomeVendedorTelaEstoque();
+        }
+        private void AtualizarNomeVendedorTelaEstoque()
+        {
+            formestoque.lbNomeFuncionario.Text = form1.txtUserName.Text;
+            formestoque.lbCargo.Text = "Vendedor(a)";
         }
         private void TempoFormEstoque()
         {
@@ -89,7 +105,5 @@ namespace Win_Forms_1
             this.Cursor = Cursors.Default;
             this.Hide();
         }
-
-        
     }
 }
