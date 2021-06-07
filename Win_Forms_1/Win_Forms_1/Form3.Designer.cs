@@ -159,7 +159,7 @@
             this.btCadastrar.Location = new System.Drawing.Point(369, 354);
             this.btCadastrar.Name = "btCadastrar";
             this.btCadastrar.Size = new System.Drawing.Size(172, 47);
-            this.btCadastrar.TabIndex = 6;
+            this.btCadastrar.TabIndex = 7;
             this.btCadastrar.Text = "Cadastrar";
             this.btCadastrar.UseVisualStyleBackColor = false;
             this.btCadastrar.Click += new System.EventHandler(this.btCadastrar_Click);
@@ -172,7 +172,7 @@
             this.btVoltar.Location = new System.Drawing.Point(12, 405);
             this.btVoltar.Name = "btVoltar";
             this.btVoltar.Size = new System.Drawing.Size(88, 33);
-            this.btVoltar.TabIndex = 7;
+            this.btVoltar.TabIndex = 8;
             this.btVoltar.Text = "Voltar";
             this.btVoltar.UseVisualStyleBackColor = false;
             this.btVoltar.Click += new System.EventHandler(this.btVoltar_Click);
@@ -196,7 +196,7 @@
             this.txtEstabelecimento.Location = new System.Drawing.Point(506, 154);
             this.txtEstabelecimento.Name = "txtEstabelecimento";
             this.txtEstabelecimento.Size = new System.Drawing.Size(274, 32);
-            this.txtEstabelecimento.TabIndex = 12;
+            this.txtEstabelecimento.TabIndex = 6;
             // 
             // label7
             // 
@@ -217,7 +217,7 @@
             this.mbCpf.Mask = "000.000.000-00";
             this.mbCpf.Name = "mbCpf";
             this.mbCpf.Size = new System.Drawing.Size(326, 32);
-            this.mbCpf.TabIndex = 14;
+            this.mbCpf.TabIndex = 1;
             // 
             // FormCadastro
             // 

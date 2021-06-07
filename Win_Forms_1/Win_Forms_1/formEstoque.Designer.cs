@@ -61,6 +61,7 @@
             this.dgvListaProdutos.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvListaProdutos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvListaProdutos.Location = new System.Drawing.Point(13, 175);
+            this.dgvListaProdutos.MultiSelect = false;
             this.dgvListaProdutos.Name = "dgvListaProdutos";
             this.dgvListaProdutos.RowHeadersWidth = 51;
             this.dgvListaProdutos.RowTemplate.Height = 24;
@@ -148,6 +149,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackgroundImage = global::Win_Forms_1.Properties.Resources.fundologin;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(763, 542);
@@ -172,12 +174,12 @@
         #endregion
 
         private System.Windows.Forms.Button btVoltar;
-        private System.Windows.Forms.DataGridView dgvListaProdutos;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button1;
         public System.Windows.Forms.Label lbNomeFuncionario;
         public System.Windows.Forms.Label lbCargo;
+        public System.Windows.Forms.DataGridView dgvListaProdutos;
     }
 }

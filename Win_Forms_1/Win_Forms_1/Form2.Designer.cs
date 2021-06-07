@@ -38,12 +38,21 @@
             this.btvendas = new System.Windows.Forms.Button();
             this.lbEstabelecimento = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbNumeroProduto = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.dgvProdutos = new System.Windows.Forms.DataGridView();
+            this.btEfetuarVenda = new System.Windows.Forms.Button();
+            this.btBuscar = new System.Windows.Forms.Button();
+            this.lbTotalAPagar = new System.Windows.Forms.Label();
+            this.dgvCarrinho = new System.Windows.Forms.DataGridView();
+            this.btAddCarrinho = new System.Windows.Forms.Button();
+            this.btRemoverDoCarrinho = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProdutos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCarrinho)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -159,13 +168,14 @@
             this.lbEstabelecimento.AutoSize = true;
             this.lbEstabelecimento.BackColor = System.Drawing.Color.Transparent;
             this.lbEstabelecimento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lbEstabelecimento.Font = new System.Drawing.Font("Bauhaus 93", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbEstabelecimento.Font = new System.Drawing.Font("Bauhaus 93", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbEstabelecimento.ForeColor = System.Drawing.Color.Transparent;
-            this.lbEstabelecimento.Location = new System.Drawing.Point(357, 48);
+            this.lbEstabelecimento.Location = new System.Drawing.Point(360, 63);
             this.lbEstabelecimento.Name = "lbEstabelecimento";
-            this.lbEstabelecimento.Size = new System.Drawing.Size(481, 45);
+            this.lbEstabelecimento.Size = new System.Drawing.Size(473, 68);
             this.lbEstabelecimento.TabIndex = 6;
-            this.lbEstabelecimento.Text = "Nome do estabelecimento";
+            this.lbEstabelecimento.Text = "estabelecimento";
+            this.lbEstabelecimento.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label3
             // 
@@ -180,12 +190,12 @@
             this.label3.TabIndex = 7;
             this.label3.Text = "Nova Venda";
             // 
-            // textBox1
+            // tbNumeroProduto
             // 
-            this.textBox1.Location = new System.Drawing.Point(505, 270);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(180, 22);
-            this.textBox1.TabIndex = 8;
+            this.tbNumeroProduto.Location = new System.Drawing.Point(505, 270);
+            this.tbNumeroProduto.Name = "tbNumeroProduto";
+            this.tbNumeroProduto.Size = new System.Drawing.Size(180, 22);
+            this.tbNumeroProduto.TabIndex = 8;
             // 
             // label4
             // 
@@ -211,16 +221,116 @@
             this.pictureBox2.TabIndex = 10;
             this.pictureBox2.TabStop = false;
             // 
+            // dgvProdutos
+            // 
+            this.dgvProdutos.AllowUserToAddRows = false;
+            this.dgvProdutos.AllowUserToDeleteRows = false;
+            this.dgvProdutos.AllowUserToResizeColumns = false;
+            this.dgvProdutos.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgvProdutos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProdutos.Location = new System.Drawing.Point(12, 331);
+            this.dgvProdutos.Name = "dgvProdutos";
+            this.dgvProdutos.RowHeadersWidth = 51;
+            this.dgvProdutos.RowTemplate.Height = 24;
+            this.dgvProdutos.Size = new System.Drawing.Size(963, 125);
+            this.dgvProdutos.TabIndex = 11;
+            // 
+            // btEfetuarVenda
+            // 
+            this.btEfetuarVenda.BackColor = System.Drawing.Color.Indigo;
+            this.btEfetuarVenda.Font = new System.Drawing.Font("Bauhaus 93", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btEfetuarVenda.ForeColor = System.Drawing.Color.Transparent;
+            this.btEfetuarVenda.Location = new System.Drawing.Point(325, 644);
+            this.btEfetuarVenda.Name = "btEfetuarVenda";
+            this.btEfetuarVenda.Size = new System.Drawing.Size(360, 40);
+            this.btEfetuarVenda.TabIndex = 12;
+            this.btEfetuarVenda.Text = "Efetuar Venda";
+            this.btEfetuarVenda.UseVisualStyleBackColor = false;
+            this.btEfetuarVenda.Click += new System.EventHandler(this.btEfetuarVenda_Click);
+            // 
+            // btBuscar
+            // 
+            this.btBuscar.BackColor = System.Drawing.Color.Indigo;
+            this.btBuscar.Font = new System.Drawing.Font("Bauhaus 93", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btBuscar.ForeColor = System.Drawing.Color.Transparent;
+            this.btBuscar.Location = new System.Drawing.Point(546, 296);
+            this.btBuscar.Name = "btBuscar";
+            this.btBuscar.Size = new System.Drawing.Size(93, 29);
+            this.btBuscar.TabIndex = 13;
+            this.btBuscar.Text = "Buscar";
+            this.btBuscar.UseVisualStyleBackColor = false;
+            this.btBuscar.Click += new System.EventHandler(this.btBuscar_Click);
+            // 
+            // lbTotalAPagar
+            // 
+            this.lbTotalAPagar.AutoSize = true;
+            this.lbTotalAPagar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lbTotalAPagar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lbTotalAPagar.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTotalAPagar.Location = new System.Drawing.Point(814, 600);
+            this.lbTotalAPagar.Name = "lbTotalAPagar";
+            this.lbTotalAPagar.Size = new System.Drawing.Size(161, 26);
+            this.lbTotalAPagar.TabIndex = 14;
+            this.lbTotalAPagar.Text = "Valor a ser pago";
+            this.lbTotalAPagar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // dgvCarrinho
+            // 
+            this.dgvCarrinho.AllowUserToAddRows = false;
+            this.dgvCarrinho.AllowUserToDeleteRows = false;
+            this.dgvCarrinho.AllowUserToResizeColumns = false;
+            this.dgvCarrinho.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgvCarrinho.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCarrinho.Location = new System.Drawing.Point(12, 462);
+            this.dgvCarrinho.Name = "dgvCarrinho";
+            this.dgvCarrinho.RowHeadersWidth = 51;
+            this.dgvCarrinho.RowTemplate.Height = 24;
+            this.dgvCarrinho.Size = new System.Drawing.Size(963, 125);
+            this.dgvCarrinho.TabIndex = 15;
+            // 
+            // btAddCarrinho
+            // 
+            this.btAddCarrinho.BackColor = System.Drawing.Color.Indigo;
+            this.btAddCarrinho.Font = new System.Drawing.Font("Bauhaus 93", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btAddCarrinho.ForeColor = System.Drawing.Color.Transparent;
+            this.btAddCarrinho.Location = new System.Drawing.Point(39, 593);
+            this.btAddCarrinho.Name = "btAddCarrinho";
+            this.btAddCarrinho.Size = new System.Drawing.Size(224, 41);
+            this.btAddCarrinho.TabIndex = 16;
+            this.btAddCarrinho.Text = "Add ao carrinho";
+            this.btAddCarrinho.UseVisualStyleBackColor = false;
+            this.btAddCarrinho.Click += new System.EventHandler(this.btAddCarrinho_Click);
+            // 
+            // btRemoverDoCarrinho
+            // 
+            this.btRemoverDoCarrinho.BackColor = System.Drawing.Color.Indigo;
+            this.btRemoverDoCarrinho.Font = new System.Drawing.Font("Bauhaus 93", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btRemoverDoCarrinho.ForeColor = System.Drawing.Color.Transparent;
+            this.btRemoverDoCarrinho.Location = new System.Drawing.Point(269, 593);
+            this.btRemoverDoCarrinho.Name = "btRemoverDoCarrinho";
+            this.btRemoverDoCarrinho.Size = new System.Drawing.Size(224, 41);
+            this.btRemoverDoCarrinho.TabIndex = 17;
+            this.btRemoverDoCarrinho.Text = "Remover do carrinho";
+            this.btRemoverDoCarrinho.UseVisualStyleBackColor = false;
+            this.btRemoverDoCarrinho.Click += new System.EventHandler(this.btRemoverDoCarrinho_Click);
+            // 
             // FormInterface
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Win_Forms_1.Properties.Resources.fundologin;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(962, 613);
+            this.ClientSize = new System.Drawing.Size(990, 696);
+            this.Controls.Add(this.btRemoverDoCarrinho);
+            this.Controls.Add(this.btAddCarrinho);
+            this.Controls.Add(this.dgvCarrinho);
+            this.Controls.Add(this.lbTotalAPagar);
+            this.Controls.Add(this.btBuscar);
+            this.Controls.Add(this.btEfetuarVenda);
+            this.Controls.Add(this.dgvProdutos);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbNumeroProduto);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lbEstabelecimento);
             this.Controls.Add(this.groupBox1);
@@ -234,6 +344,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProdutos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCarrinho)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -248,11 +360,18 @@
         private System.Windows.Forms.Button btRendaDiaria;
         private System.Windows.Forms.Button btvendas;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbNumeroProduto;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox2;
         public System.Windows.Forms.Label lbNomeFuncionario;
         public System.Windows.Forms.Label lbCargo;
         public System.Windows.Forms.Label lbEstabelecimento;
+        private System.Windows.Forms.DataGridView dgvProdutos;
+        private System.Windows.Forms.Button btEfetuarVenda;
+        private System.Windows.Forms.Button btBuscar;
+        private System.Windows.Forms.Label lbTotalAPagar;
+        private System.Windows.Forms.DataGridView dgvCarrinho;
+        private System.Windows.Forms.Button btAddCarrinho;
+        private System.Windows.Forms.Button btRemoverDoCarrinho;
     }
 }

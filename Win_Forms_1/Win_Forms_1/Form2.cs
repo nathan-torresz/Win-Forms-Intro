@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 using System.Threading;
 
 namespace Win_Forms_1
@@ -104,6 +105,123 @@ namespace Win_Forms_1
             formestoque.AtualizarListaEstoque();
             this.Cursor = Cursors.Default;
             this.Hide();
+        }
+
+        private void btBuscar_Click(object sender, EventArgs e)
+        {
+            SqlDataAdapter adapt = null;
+            if (tbNumeroProduto.Text != "")
+            {
+                try
+                {
+                    adapt = BD.BuscarNumeroProduto(tbNumeroProduto.Text);
+                }
+                catch (SqlException ex)
+                {
+                    MessageBox.Show("Erro!" + ex);
+                }
+                finally
+                {
+                    if (adapt != null)
+                    {
+                        DataTable tb = new DataTable();
+                        adapt.Fill(tb);
+                        dgvProdutos.DataSource = tb;
+                        dgvProdutos.ClearSelection();
+                        tbNumeroProduto.Clear();
+                        tbNumeroProduto.Focus();
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Insira o número do produto!");
+                tbNumeroProduto.Clear();
+                tbNumeroProduto.Focus();
+            }
+        }
+        public static double Total;
+        private void btEfetuarVenda_Click(object sender, EventArgs e)
+        {
+            int linhaSelecionada = dgvProdutos.SelectedCells[0].RowIndex;
+            int idProduto = (int)dgvProdutos.Rows[linhaSelecionada].Cells[0].Value;
+
+            try
+            {
+                BD.InserirNoCarrinho(new Vendas(idProduto));
+            }
+            catch(SqlException ex)
+            {
+                MessageBox.Show("Erro ao finalizar compra!");
+            }
+            finally
+            {
+                DialogResult msg = MessageBox.Show("O pagamento foi realizado corretamente?",
+                    "Confirmação", MessageBoxButtons.YesNo);
+                if(msg == DialogResult.Yes)
+                {
+                    MessageBox.Show("Compra finalizada com sucesso!");
+                    Total = Total - Convert.ToDouble(dgvCarrinho.Rows[dgvCarrinho.CurrentRow.Index].Cells[5].Value);
+                    lbTotalAPagar.Text = Total.ToString();
+                    dgvCarrinho.Rows.RemoveAt(dgvCarrinho.CurrentRow.Index);
+                }
+                else if(msg == DialogResult.No)
+                {
+                    MessageBox.Show("Efetue o pagamento!");
+                }
+            }
+        }
+
+        private void btAddCarrinho_Click(object sender, EventArgs e)
+        {
+            int linhaSelecionada = dgvProdutos.SelectedCells[0].RowIndex;
+            int idProduto = (int)dgvProdutos.Rows[linhaSelecionada].Cells[0].Value;
+
+            SqlDataAdapter adapt = null;
+            try
+            {
+                adapt = BD.BuscarNumeroProduto(idProduto.ToString());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao adiconar ao carrinho!");
+            }
+            finally
+            {
+                if (adapt != null)
+                {
+                    DataTable tab = new DataTable();
+                    adapt.Fill(tab);
+                    dgvCarrinho.DataSource = tab;
+                    AtualizarPrecoCarrinho();
+                    dgvCarrinho.ClearSelection();
+                }
+            }
+        }
+        private void AtualizarPrecoCarrinho()
+        {
+            foreach (DataGridViewRow linha in dgvCarrinho.Rows)
+            {
+                Total += Convert.ToDouble(linha.Cells[5].Value);
+            }
+            lbTotalAPagar.Text = "R$ " + Total.ToString();
+        }
+
+        private void btRemoverDoCarrinho_Click(object sender, EventArgs e)
+        {
+            if(dgvCarrinho.SelectedRows.Count > 0)
+            {
+                Total = Total - Convert.ToDouble(dgvCarrinho.Rows[dgvCarrinho.CurrentRow.Index].Cells[5].Value);
+                lbTotalAPagar.Text = Total.ToString();
+                if(Total > 0)
+                {
+                    dgvCarrinho.Rows.RemoveAt(dgvCarrinho.CurrentRow.Index);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Selecione um item a ser removido!");
+            }
         }
     }
 }

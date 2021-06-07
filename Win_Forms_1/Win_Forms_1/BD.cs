@@ -63,6 +63,21 @@ namespace Win_Forms_1
             int linhasAfetadas = Executar(out SqlDataAdapter adapt);
             return adapt;
         }
+        public static SqlDataAdapter BuscarNumeroProduto(string idProduto)
+        {
+            sql = new SqlCommand();
+            sql.CommandText = $"SELECT * FROM Estoque WHERE Id LIKE '%{idProduto}%'";
+            int linhasAfetadas = Executar(out SqlDataAdapter adapt);
+            return adapt;
+        }
+
+        public static void InserirNoCarrinho(Vendas v)
+        {
+            sql = new SqlCommand();
+            sql.CommandText = $"INSERT INTO Vendas (Id_Produto) " +
+                $"VALUES ('{v.IdProduto}')";
+            Executar(out SqlDataAdapter adapt);
+        }
     }
 }
     
