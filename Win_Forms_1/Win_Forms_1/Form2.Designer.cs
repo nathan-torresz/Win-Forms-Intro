@@ -226,9 +226,11 @@
             this.dgvProdutos.AllowUserToAddRows = false;
             this.dgvProdutos.AllowUserToDeleteRows = false;
             this.dgvProdutos.AllowUserToResizeColumns = false;
+            this.dgvProdutos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvProdutos.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvProdutos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProdutos.Location = new System.Drawing.Point(12, 331);
+            this.dgvProdutos.MultiSelect = false;
             this.dgvProdutos.Name = "dgvProdutos";
             this.dgvProdutos.RowHeadersWidth = 51;
             this.dgvProdutos.RowTemplate.Height = 24;
@@ -263,15 +265,15 @@
             // 
             // lbTotalAPagar
             // 
-            this.lbTotalAPagar.AutoSize = true;
+            this.lbTotalAPagar.BackColor = System.Drawing.Color.Transparent;
             this.lbTotalAPagar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lbTotalAPagar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lbTotalAPagar.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTotalAPagar.Location = new System.Drawing.Point(814, 600);
+            this.lbTotalAPagar.Font = new System.Drawing.Font("Bahnschrift", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTotalAPagar.ForeColor = System.Drawing.Color.Transparent;
+            this.lbTotalAPagar.Location = new System.Drawing.Point(731, 600);
             this.lbTotalAPagar.Name = "lbTotalAPagar";
-            this.lbTotalAPagar.Size = new System.Drawing.Size(161, 26);
+            this.lbTotalAPagar.Size = new System.Drawing.Size(244, 52);
             this.lbTotalAPagar.TabIndex = 14;
-            this.lbTotalAPagar.Text = "Valor a ser pago";
+            this.lbTotalAPagar.Text = "Valor";
             this.lbTotalAPagar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // dgvCarrinho
@@ -279,9 +281,11 @@
             this.dgvCarrinho.AllowUserToAddRows = false;
             this.dgvCarrinho.AllowUserToDeleteRows = false;
             this.dgvCarrinho.AllowUserToResizeColumns = false;
+            this.dgvCarrinho.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvCarrinho.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvCarrinho.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCarrinho.Location = new System.Drawing.Point(12, 462);
+            this.dgvCarrinho.MultiSelect = false;
             this.dgvCarrinho.Name = "dgvCarrinho";
             this.dgvCarrinho.RowHeadersWidth = 51;
             this.dgvCarrinho.RowTemplate.Height = 24;
@@ -341,6 +345,7 @@
             this.Name = "FormInterface";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form2";
+            this.Load += new System.EventHandler(this.FormInterface_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -370,8 +375,8 @@
         private System.Windows.Forms.Button btEfetuarVenda;
         private System.Windows.Forms.Button btBuscar;
         private System.Windows.Forms.Label lbTotalAPagar;
-        private System.Windows.Forms.DataGridView dgvCarrinho;
         private System.Windows.Forms.Button btAddCarrinho;
         private System.Windows.Forms.Button btRemoverDoCarrinho;
+        public System.Windows.Forms.DataGridView dgvCarrinho;
     }
 }

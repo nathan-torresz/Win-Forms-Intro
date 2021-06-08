@@ -74,7 +74,7 @@ namespace Win_Forms_1
         public static void InserirNoCarrinho(Vendas v)
         {
             sql = new SqlCommand();
-            sql.CommandText = $"INSERT INTO Vendas (Id_Produto) " +
+            sql.CommandText = $"INSERT INTO Carrinho (Id_Produto) " +
                 $"VALUES ('{v.IdProduto}')";
             Executar(out SqlDataAdapter adapt);
         }

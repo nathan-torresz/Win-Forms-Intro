@@ -35,6 +35,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lbNomeFuncionario = new System.Windows.Forms.Label();
             this.lbCargo = new System.Windows.Forms.Label();
+            this.lbValorDiario = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRendaDiaria)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -55,6 +56,7 @@
             // 
             // dgvRendaDiaria
             // 
+            this.dgvRendaDiaria.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvRendaDiaria.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRendaDiaria.Location = new System.Drawing.Point(12, 187);
             this.dgvRendaDiaria.Name = "dgvRendaDiaria";
@@ -122,12 +124,26 @@
             this.lbCargo.TabIndex = 6;
             this.lbCargo.Text = "Cargo";
             // 
+            // lbValorDiario
+            // 
+            this.lbValorDiario.AutoSize = true;
+            this.lbValorDiario.BackColor = System.Drawing.Color.Transparent;
+            this.lbValorDiario.Font = new System.Drawing.Font("Bahnschrift", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbValorDiario.ForeColor = System.Drawing.Color.Transparent;
+            this.lbValorDiario.Location = new System.Drawing.Point(358, 462);
+            this.lbValorDiario.Name = "lbValorDiario";
+            this.lbValorDiario.Size = new System.Drawing.Size(97, 41);
+            this.lbValorDiario.TabIndex = 7;
+            this.lbValorDiario.Text = "valor";
+            this.lbValorDiario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // formRendaDiaria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Win_Forms_1.Properties.Resources.fundologin;
             this.ClientSize = new System.Drawing.Size(810, 515);
+            this.Controls.Add(this.lbValorDiario);
             this.Controls.Add(this.lbCargo);
             this.Controls.Add(this.lbNomeFuncionario);
             this.Controls.Add(this.pictureBox1);
@@ -138,6 +154,7 @@
             this.Name = "formRendaDiaria";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "formRendaDiaria";
+            this.Load += new System.EventHandler(this.formRendaDiaria_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvRendaDiaria)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -148,11 +165,12 @@
         #endregion
 
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridView dgvRendaDiaria;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
         public System.Windows.Forms.Label lbNomeFuncionario;
         public System.Windows.Forms.Label lbCargo;
+        public System.Windows.Forms.DataGridView dgvRendaDiaria;
+        public System.Windows.Forms.Label lbValorDiario;
     }
 }

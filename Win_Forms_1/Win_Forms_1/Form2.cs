@@ -145,60 +145,113 @@ namespace Win_Forms_1
         {
             int linhaSelecionada = dgvProdutos.SelectedCells[0].RowIndex;
             int idProduto = (int)dgvProdutos.Rows[linhaSelecionada].Cells[0].Value;
-
-            try
+            if(dgvCarrinho.Rows.Count > 0)
             {
-                BD.InserirNoCarrinho(new Vendas(idProduto));
-            }
-            catch(SqlException ex)
-            {
-                MessageBox.Show("Erro ao finalizar compra!");
-            }
-            finally
-            {
-                DialogResult msg = MessageBox.Show("O pagamento foi realizado corretamente?",
-                    "Confirmação", MessageBoxButtons.YesNo);
-                if(msg == DialogResult.Yes)
+                try
                 {
-                    MessageBox.Show("Compra finalizada com sucesso!");
+                    DialogResult msg = MessageBox.Show("O pagamento foi realizado corretamente?",
+                        "Confirmação", MessageBoxButtons.YesNo);
+                    if (msg == DialogResult.Yes)
+                    {
+                        MessageBox.Show("Compra finalizada com sucesso!");
+                        BD.InserirNoCarrinho(new Vendas(idProduto));
+                        AtualizarFormRenda();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Efetue o pagamento!");
+                    }
+                }
+                catch (SqlException ex)
+                {
+                    MessageBox.Show("Erro ao finalizar compra!");
+                }
+                finally
+                {
+                    int num = 0;
                     Total = Total - Convert.ToDouble(dgvCarrinho.Rows[dgvCarrinho.CurrentRow.Index].Cells[5].Value);
-                    lbTotalAPagar.Text = Total.ToString();
+                    lbTotalAPagar.Text = num.ToString();
                     dgvCarrinho.Rows.RemoveAt(dgvCarrinho.CurrentRow.Index);
+                    dgvProdutos.ClearSelection();
                 }
-                else if(msg == DialogResult.No)
-                {
-                    MessageBox.Show("Efetue o pagamento!");
-                }
+            }
+            else
+            {
+                MessageBox.Show("Nao há itens no seu carrinho!");
             }
         }
 
         private void btAddCarrinho_Click(object sender, EventArgs e)
         {
+            if (dgvProdutos.SelectedRows.Count > 0)
+            {
+                int linhaSelecionada = dgvProdutos.SelectedCells[0].RowIndex;
+                int idProduto = (int)dgvProdutos.Rows[linhaSelecionada].Cells[0].Value;
+
+                SqlDataAdapter adapt = null;
+                try
+                {
+                    adapt = BD.BuscarNumeroProduto(idProduto.ToString());
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro ao adiconar ao carrinho!");
+                }
+                finally
+                {
+                    if (adapt != null)
+                    {
+                        DataTable tab = new DataTable();
+                        adapt.Fill(tab);
+                        dgvCarrinho.DataSource = tab;
+                        AtualizarPrecoCarrinho();
+                        dgvCarrinho.ClearSelection();
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Selecione o produto a ser adicionado!");
+            }
+        }
+        public void AtualizarFormRenda()
+        {
             int linhaSelecionada = dgvProdutos.SelectedCells[0].RowIndex;
             int idProduto = (int)dgvProdutos.Rows[linhaSelecionada].Cells[0].Value;
 
-            SqlDataAdapter adapt = null;
-            try
+            if (dgvCarrinho.Rows.Count > 0)
             {
-                adapt = BD.BuscarNumeroProduto(idProduto.ToString());
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Erro ao adiconar ao carrinho!");
-            }
-            finally
-            {
-                if (adapt != null)
+                SqlDataAdapter adapt = null;
+                try
                 {
-                    DataTable tab = new DataTable();
-                    adapt.Fill(tab);
-                    dgvCarrinho.DataSource = tab;
-                    AtualizarPrecoCarrinho();
-                    dgvCarrinho.ClearSelection();
+                    adapt = BD.BuscarNumeroProduto(idProduto.ToString());
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro ao adiconar ao carrinho!");
+                }
+                finally
+                {
+                    if (adapt != null)
+                    {
+                        DataTable tab = new DataTable();
+                        adapt.Fill(tab);
+                        formrenda.dgvRendaDiaria.DataSource = tab;
+                        AtualizarValorRendaDiaria();
+                        formrenda.dgvRendaDiaria.ClearSelection();
+                    }
                 }
             }
         }
-        private void AtualizarPrecoCarrinho()
+        public void AtualizarValorRendaDiaria()
+        {
+            foreach (DataGridViewRow linha in formrenda.dgvRendaDiaria.Rows)
+            {
+                Total += Convert.ToDouble(linha.Cells[5].Value);
+            }
+            formrenda.lbValorDiario.Text = lbTotalAPagar.Text;
+        }
+        public void AtualizarPrecoCarrinho()
         {
             foreach (DataGridViewRow linha in dgvCarrinho.Rows)
             {
@@ -213,7 +266,7 @@ namespace Win_Forms_1
             {
                 Total = Total - Convert.ToDouble(dgvCarrinho.Rows[dgvCarrinho.CurrentRow.Index].Cells[5].Value);
                 lbTotalAPagar.Text = Total.ToString();
-                if(Total > 0)
+                if(Total == 0)
                 {
                     dgvCarrinho.Rows.RemoveAt(dgvCarrinho.CurrentRow.Index);
                 }
@@ -222,6 +275,11 @@ namespace Win_Forms_1
             {
                 MessageBox.Show("Selecione um item a ser removido!");
             }
+        }
+
+        private void FormInterface_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }

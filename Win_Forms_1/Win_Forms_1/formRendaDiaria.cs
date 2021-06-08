@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 using System.Threading;
 
 namespace Win_Forms_1
@@ -23,6 +24,7 @@ namespace Win_Forms_1
         private void button1_Click(object sender, EventArgs e)
         {
             TempoFormInterface();
+            forminterface.dgvCarrinho.ClearSelection();
         }
         private void TempoFormInterface()
         {
@@ -31,6 +33,11 @@ namespace Win_Forms_1
             forminterface.Show();
             this.Cursor = Cursors.Default;
             this.Hide();
+        }
+
+        private void formRendaDiaria_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }
