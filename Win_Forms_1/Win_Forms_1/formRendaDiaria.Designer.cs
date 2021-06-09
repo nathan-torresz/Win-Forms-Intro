@@ -132,7 +132,7 @@
             this.lbValorDiario.ForeColor = System.Drawing.Color.Transparent;
             this.lbValorDiario.Location = new System.Drawing.Point(358, 462);
             this.lbValorDiario.Name = "lbValorDiario";
-            this.lbValorDiario.Size = new System.Drawing.Size(97, 41);
+            this.lbValorDiario.Size = new System.Drawing.Size(94, 40);
             this.lbValorDiario.TabIndex = 7;
             this.lbValorDiario.Text = "valor";
             this.lbValorDiario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;

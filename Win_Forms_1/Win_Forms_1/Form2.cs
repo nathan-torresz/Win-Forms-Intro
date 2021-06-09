@@ -72,6 +72,7 @@ namespace Win_Forms_1
         {
             TempoFormRenda();
             AtualizarNomeVendedor();
+            
         }
         private void AtualizarNomeVendedor()
         {
@@ -140,13 +141,19 @@ namespace Win_Forms_1
                 tbNumeroProduto.Focus();
             }
         }
-        public static double Total;
+        public static double Total = 0;
         private void btEfetuarVenda_Click(object sender, EventArgs e)
         {
-            int linhaSelecionada = dgvProdutos.SelectedCells[0].RowIndex;
-            int idProduto = (int)dgvProdutos.Rows[linhaSelecionada].Cells[0].Value;
-            if(dgvCarrinho.Rows.Count > 0)
+            if (dgvCarrinho.Rows.Count > 0)
             {
+                int linhaSelecionada = dgvProdutos.SelectedCells[0].RowIndex;
+                int idProduto = (int)dgvProdutos.Rows[linhaSelecionada].Cells[0].Value;
+                string numeroProduto = (string)dgvProdutos.Rows[linhaSelecionada].Cells[1].Value;
+                string nomeProduto = (string)dgvProdutos.Rows[linhaSelecionada].Cells[2].Value;
+                string marcaProduto = (string)dgvProdutos.Rows[linhaSelecionada].Cells[3].Value;
+                string descricaoProduto = (string)dgvProdutos.Rows[linhaSelecionada].Cells[4].Value;
+                string precoProduto = (string)dgvProdutos.Rows[linhaSelecionada].Cells[5].Value;
+
                 try
                 {
                     DialogResult msg = MessageBox.Show("O pagamento foi realizado corretamente?",
@@ -154,8 +161,9 @@ namespace Win_Forms_1
                     if (msg == DialogResult.Yes)
                     {
                         MessageBox.Show("Compra finalizada com sucesso!");
-                        BD.InserirNoCarrinho(new Vendas(idProduto));
-                        AtualizarFormRenda();
+                        BD.RegistrarVenda(new Vendas(idProduto,numeroProduto,nomeProduto,marcaProduto,descricaoProduto,
+                            precoProduto));
+                        ListarVendas();
                     }
                     else
                     {
@@ -168,11 +176,10 @@ namespace Win_Forms_1
                 }
                 finally
                 {
-                    int num = 0;
-                    Total = Total - Convert.ToDouble(dgvCarrinho.Rows[dgvCarrinho.CurrentRow.Index].Cells[5].Value);
+                    double num = 0;
                     lbTotalAPagar.Text = num.ToString();
-                    dgvCarrinho.Rows.RemoveAt(dgvCarrinho.CurrentRow.Index);
-                    dgvProdutos.ClearSelection();
+                    BD.ExcluirCarrinho();
+                    ListaCarrinho();
                 }
             }
             else
@@ -180,7 +187,39 @@ namespace Win_Forms_1
                 MessageBox.Show("Nao há itens no seu carrinho!");
             }
         }
-
+        public void ListarVendas()
+        {
+            //AtualizarFormRenda
+            SqlDataAdapter adapt = null;
+            try
+            {
+                adapt = BD.SelectVendas();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Não há vendas registradas");
+            }
+            finally
+            {
+                if (adapt != null)
+                {
+                    DataTable tab = new DataTable();
+                    adapt.Fill(tab);
+                    formrenda.dgvRendaDiaria.DataSource = tab;
+                    AtualizarRenda();
+                    formrenda.dgvRendaDiaria.ClearSelection();
+                }
+            }
+        }
+        public void AtualizarRenda()
+        {
+            Total = 0;
+            foreach (DataGridViewRow linha in formrenda.dgvRendaDiaria.Rows)
+            {
+                Total += Convert.ToDouble(linha.Cells[6].Value);
+            }
+            formrenda.lbValorDiario.Text = "R$ " + Total.ToString();
+        }
         private void btAddCarrinho_Click(object sender, EventArgs e)
         {
             if (dgvProdutos.SelectedRows.Count > 0)
@@ -188,74 +227,51 @@ namespace Win_Forms_1
                 int linhaSelecionada = dgvProdutos.SelectedCells[0].RowIndex;
                 int idProduto = (int)dgvProdutos.Rows[linhaSelecionada].Cells[0].Value;
 
-                SqlDataAdapter adapt = null;
-                try
-                {
-                    adapt = BD.BuscarNumeroProduto(idProduto.ToString());
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Erro ao adiconar ao carrinho!");
-                }
-                finally
-                {
-                    if (adapt != null)
-                    {
-                        DataTable tab = new DataTable();
-                        adapt.Fill(tab);
-                        dgvCarrinho.DataSource = tab;
-                        AtualizarPrecoCarrinho();
-                        dgvCarrinho.ClearSelection();
-                    }
-                }
+                string numeroProduto = (string)dgvProdutos.Rows[linhaSelecionada].Cells[1].Value;
+                string nomeProduto = (string)dgvProdutos.Rows[linhaSelecionada].Cells[2].Value;
+                string marcaProduto = (string)dgvProdutos.Rows[linhaSelecionada].Cells[3].Value;
+                string descricaoProduto = (string)dgvProdutos.Rows[linhaSelecionada].Cells[4].Value;
+                string precoProduto = (string)dgvProdutos.Rows[linhaSelecionada].Cells[5].Value;
+
+                BD.InserirNoCarrinho(new CarrinhoCompras(idProduto, numeroProduto, nomeProduto, marcaProduto, descricaoProduto,
+                    precoProduto));
+                ListaCarrinho();
+                
             }
             else
             {
                 MessageBox.Show("Selecione o produto a ser adicionado!");
             }
         }
-        public void AtualizarFormRenda()
+        public void ListaCarrinho()
         {
-            int linhaSelecionada = dgvProdutos.SelectedCells[0].RowIndex;
-            int idProduto = (int)dgvProdutos.Rows[linhaSelecionada].Cells[0].Value;
-
-            if (dgvCarrinho.Rows.Count > 0)
+            SqlDataAdapter adapt = null;
+            try
             {
-                SqlDataAdapter adapt = null;
-                try
+                adapt = BD.SelectItensCarrinho();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Não há itens no seu carrinho!" + ex);
+            }
+            finally
+            {
+                if (adapt != null)
                 {
-                    adapt = BD.BuscarNumeroProduto(idProduto.ToString());
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Erro ao adiconar ao carrinho!");
-                }
-                finally
-                {
-                    if (adapt != null)
-                    {
-                        DataTable tab = new DataTable();
-                        adapt.Fill(tab);
-                        formrenda.dgvRendaDiaria.DataSource = tab;
-                        AtualizarValorRendaDiaria();
-                        formrenda.dgvRendaDiaria.ClearSelection();
-                    }
+                    DataTable tab = new DataTable();
+                    adapt.Fill(tab);
+                    dgvCarrinho.DataSource = tab;
+                    AtualizarPrecoCarrinho();
+                    dgvCarrinho.ClearSelection();
                 }
             }
-        }
-        public void AtualizarValorRendaDiaria()
-        {
-            foreach (DataGridViewRow linha in formrenda.dgvRendaDiaria.Rows)
-            {
-                Total += Convert.ToDouble(linha.Cells[5].Value);
-            }
-            formrenda.lbValorDiario.Text = lbTotalAPagar.Text;
         }
         public void AtualizarPrecoCarrinho()
         {
+            Total = 0;
             foreach (DataGridViewRow linha in dgvCarrinho.Rows)
             {
-                Total += Convert.ToDouble(linha.Cells[5].Value);
+                Total += Convert.ToDouble(linha.Cells[6].Value);
             }
             lbTotalAPagar.Text = "R$ " + Total.ToString();
         }
@@ -264,22 +280,20 @@ namespace Win_Forms_1
         {
             if(dgvCarrinho.SelectedRows.Count > 0)
             {
-                Total = Total - Convert.ToDouble(dgvCarrinho.Rows[dgvCarrinho.CurrentRow.Index].Cells[5].Value);
+                int linhaSelecionada = dgvCarrinho.SelectedCells[0].RowIndex;
+                int idProduto = (int)dgvCarrinho.Rows[linhaSelecionada].Cells[0].Value;
+
+                Total = Total - Convert.ToDouble(dgvCarrinho.Rows[dgvCarrinho.CurrentRow.Index].Cells[6].Value);
                 lbTotalAPagar.Text = Total.ToString();
-                if(Total == 0)
-                {
-                    dgvCarrinho.Rows.RemoveAt(dgvCarrinho.CurrentRow.Index);
-                }
+
+                dgvCarrinho.Rows.RemoveAt(dgvCarrinho.CurrentRow.Index);
+                BD.DeletarDoCarrinho(idProduto);
+                
             }
             else
             {
                 MessageBox.Show("Selecione um item a ser removido!");
             }
-        }
-
-        private void FormInterface_Load(object sender, EventArgs e)
-        {
-            
         }
     }
 }

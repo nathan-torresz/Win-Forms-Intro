@@ -26,6 +26,8 @@ namespace Win_Forms_1
             TempoFormInterface();
             forminterface.dgvCarrinho.ClearSelection();
         }
+        public static double Total1 = FormInterface.Total;
+        
         private void TempoFormInterface()
         {
             this.Cursor = Cursors.WaitCursor;
@@ -37,7 +39,7 @@ namespace Win_Forms_1
 
         private void formRendaDiaria_Load(object sender, EventArgs e)
         {
-            
+           
         }
     }
 }

@@ -345,7 +345,6 @@
             this.Name = "FormInterface";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form2";
-            this.Load += new System.EventHandler(this.FormInterface_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -374,9 +373,9 @@
         private System.Windows.Forms.DataGridView dgvProdutos;
         private System.Windows.Forms.Button btEfetuarVenda;
         private System.Windows.Forms.Button btBuscar;
-        private System.Windows.Forms.Label lbTotalAPagar;
         private System.Windows.Forms.Button btAddCarrinho;
         private System.Windows.Forms.Button btRemoverDoCarrinho;
         public System.Windows.Forms.DataGridView dgvCarrinho;
+        public System.Windows.Forms.Label lbTotalAPagar;
     }
 }

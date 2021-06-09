@@ -70,12 +70,48 @@ namespace Win_Forms_1
             int linhasAfetadas = Executar(out SqlDataAdapter adapt);
             return adapt;
         }
-
-        public static void InserirNoCarrinho(Vendas v)
+        public static void RegistrarVenda(Vendas v)
         {
             sql = new SqlCommand();
-            sql.CommandText = $"INSERT INTO Carrinho (Id_Produto) " +
-                $"VALUES ('{v.IdProduto}')";
+            sql.CommandText = $"INSERT INTO Vendas (Id_Produto, Numero, Nome_Produto, Marca_Produto, Descricao, Preco) " +
+                $"VALUES ('{v.IdProduto}', '{v.NumeroProduto}','{v.NomeProduto}','{v.MarcaProduto}','{v.DescricaoProduto}', " +
+                $"'{v.PrecoProduto}')";
+            Executar(out SqlDataAdapter adapt);
+        }
+        public static SqlDataAdapter SelectVendas()
+        {
+            sql = new SqlCommand();
+            sql.CommandText = $"SELECT * FROM Vendas";
+            int linhasAfetadas = Executar(out SqlDataAdapter adapt);
+            return adapt;
+        }
+        public static void InserirNoCarrinho(CarrinhoCompras c)
+        {
+            sql = new SqlCommand();
+            sql.CommandText = $"INSERT INTO Carrinho (Id_Produto, Numero, Nome_Produto, Marca_Produto, Descricao, Preco) " +
+                $"VALUES ('{c.IdProduto}', '{c.NumeroProduto}','{c.NomeProduto}','{c.MarcaProduto}','{c.DescricaoProduto}', " +
+                $"'{c.PrecoProduto}')";
+            Executar(out SqlDataAdapter adapt);
+        }
+        public static SqlDataAdapter SelectItensCarrinho()
+        {
+            sql = new SqlCommand();
+            sql.CommandText = $"SELECT * FROM Carrinho";
+            int linhasAfetadas = Executar(out SqlDataAdapter adapt);
+            return adapt;
+        }
+
+        public static void ExcluirCarrinho()
+        {
+            sql = new SqlCommand();
+            sql.CommandText = $"TRUNCATE TABLE Carrinho";
+            Executar();
+        }
+
+        public static void DeletarDoCarrinho(int id)
+        {
+            sql = new SqlCommand();
+            sql.CommandText = $"DELETE FROM Carrinho WHERE Id= '{id}'";
             Executar(out SqlDataAdapter adapt);
         }
     }
