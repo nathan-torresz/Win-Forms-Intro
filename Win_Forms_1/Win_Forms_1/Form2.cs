@@ -58,6 +58,12 @@ namespace Win_Forms_1
         private void btvendas_Click(object sender, EventArgs e)
         {
             TempoFormVendas();
+            AtualizarNomeVendedorvendas();
+        }
+        private void AtualizarNomeVendedorvendas()
+        {
+            formvendas.lbNomeFuncionario.Text = form1.txtUserName.Text;
+            formvendas.lbCargo.Text = "Vendedor(a)";
         }
         private void TempoFormVendas()
         {
@@ -161,9 +167,8 @@ namespace Win_Forms_1
                     if (msg == DialogResult.Yes)
                     {
                         MessageBox.Show("Compra finalizada com sucesso!");
-                        BD.RegistrarVenda(new Vendas(idProduto,numeroProduto,nomeProduto,marcaProduto,descricaoProduto,
+                        BD.RegistrarVenda(new Vendas(idProduto, numeroProduto, nomeProduto, marcaProduto, descricaoProduto,
                             precoProduto));
-                        ListarVendas();
                     }
                     else
                     {
@@ -179,7 +184,9 @@ namespace Win_Forms_1
                     double num = 0;
                     lbTotalAPagar.Text = num.ToString();
                     BD.ExcluirCarrinho();
+                    ListarPrecoVendas();
                     ListaCarrinho();
+                    ListarVendas();
                 }
             }
             else
@@ -205,20 +212,34 @@ namespace Win_Forms_1
                 {
                     DataTable tab = new DataTable();
                     adapt.Fill(tab);
-                    formrenda.dgvRendaDiaria.DataSource = tab;
-                    AtualizarRenda();
-                    formrenda.dgvRendaDiaria.ClearSelection();
+                    formvendas.dgvVendidos.DataSource = tab;
+                    formvendas.dgvVendidos.ClearSelection();
                 }
             }
         }
-        public void AtualizarRenda()
+        public void ListarPrecoVendas()
         {
-            Total = 0;
-            foreach (DataGridViewRow linha in formrenda.dgvRendaDiaria.Rows)
+            //AtualizarFormRenda
+            SqlDataAdapter adapt = null;
+            try
             {
-                Total += Convert.ToDouble(linha.Cells[6].Value);
+                adapt = BD.SelectPrecoVendas();
             }
-            formrenda.lbValorDiario.Text = "R$ " + Total.ToString();
+            catch (Exception ex)
+            {
+                MessageBox.Show("Não há vendas registradas");
+            }
+            finally
+            {
+                if (adapt != null)
+                {
+                    DataTable tab = new DataTable();
+                    adapt.Fill(tab);
+                    formrenda.dgvRendaDiaria.DataSource = tab;
+                    formrenda.AtualizarRenda();
+                    formrenda.dgvRendaDiaria.ClearSelection();
+                }
+            }
         }
         private void btAddCarrinho_Click(object sender, EventArgs e)
         {

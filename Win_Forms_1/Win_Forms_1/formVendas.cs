@@ -22,7 +22,7 @@ namespace Win_Forms_1
 
         private void btVoltar_Click(object sender, EventArgs e)
         {
-            TempoFormInterface();
+            
         }
         private void TempoFormInterface()
         {
@@ -31,6 +31,11 @@ namespace Win_Forms_1
             forminterface.Show();
             this.Cursor = Cursors.Default;
             this.Hide();
+        }
+
+        private void btVoltar_Click_1(object sender, EventArgs e)
+        {
+            TempoFormInterface();
         }
     }
 }

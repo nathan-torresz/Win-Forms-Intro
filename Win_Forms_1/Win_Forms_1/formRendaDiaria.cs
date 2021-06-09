@@ -27,7 +27,14 @@ namespace Win_Forms_1
             forminterface.dgvCarrinho.ClearSelection();
         }
         public static double Total1 = FormInterface.Total;
-        
+        public void AtualizarRenda()
+        {
+            foreach (DataGridViewRow linha in dgvRendaDiaria.Rows)
+            {
+                Total1 += Convert.ToDouble(linha.Cells[6].Value);
+            }
+            lbValorDiario.Text = "R$ " + Total1.ToString();
+        }
         private void TempoFormInterface()
         {
             this.Cursor = Cursors.WaitCursor;

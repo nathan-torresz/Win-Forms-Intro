@@ -59,6 +59,7 @@
             this.dgvRendaDiaria.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvRendaDiaria.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRendaDiaria.Location = new System.Drawing.Point(12, 187);
+            this.dgvRendaDiaria.MultiSelect = false;
             this.dgvRendaDiaria.Name = "dgvRendaDiaria";
             this.dgvRendaDiaria.RowHeadersWidth = 51;
             this.dgvRendaDiaria.RowTemplate.Height = 24;

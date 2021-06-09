@@ -78,10 +78,17 @@ namespace Win_Forms_1
                 $"'{v.PrecoProduto}')";
             Executar(out SqlDataAdapter adapt);
         }
-        public static SqlDataAdapter SelectVendas()
+        public static SqlDataAdapter SelectPrecoVendas()
         {
             sql = new SqlCommand();
             sql.CommandText = $"SELECT * FROM Vendas";
+            int linhasAfetadas = Executar(out SqlDataAdapter adapt);
+            return adapt;
+        }
+        public static SqlDataAdapter SelectVendas()
+        {
+            sql = new SqlCommand();
+            sql.CommandText = $"SELECT Nome_Produto, Marca_Produto, Descricao FROM Vendas";
             int linhasAfetadas = Executar(out SqlDataAdapter adapt);
             return adapt;
         }
