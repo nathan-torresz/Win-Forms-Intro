@@ -32,7 +32,10 @@ namespace Win_Forms_1
             this.Cursor = Cursors.Default;
             this.Hide();
         }
-
+        public void AtualizarNomeEstabelecimento()
+        {
+            lbNomeEstabelecimento.Text = forminterface.lbEstabelecimento.Text;
+        }
         private void btVoltar_Click_1(object sender, EventArgs e)
         {
             TempoFormInterface();

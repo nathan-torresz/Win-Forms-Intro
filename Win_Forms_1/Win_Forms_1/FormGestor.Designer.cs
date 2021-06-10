@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbNomeEstabelecimento = new System.Windows.Forms.Label();
             this.lbNomeFuncionario = new System.Windows.Forms.Label();
             this.lbCargo = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -49,17 +49,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaProdutos)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // lbNomeEstabelecimento
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Bauhaus 93", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(344, 29);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(478, 45);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Nome do Estabelecimento";
+            this.lbNomeEstabelecimento.AutoSize = true;
+            this.lbNomeEstabelecimento.BackColor = System.Drawing.Color.Transparent;
+            this.lbNomeEstabelecimento.Font = new System.Drawing.Font("Bauhaus 93", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNomeEstabelecimento.ForeColor = System.Drawing.Color.Transparent;
+            this.lbNomeEstabelecimento.Location = new System.Drawing.Point(344, 29);
+            this.lbNomeEstabelecimento.Name = "lbNomeEstabelecimento";
+            this.lbNomeEstabelecimento.Size = new System.Drawing.Size(478, 45);
+            this.lbNomeEstabelecimento.TabIndex = 0;
+            this.lbNomeEstabelecimento.Text = "Nome do Estabelecimento";
             // 
             // lbNomeFuncionario
             // 
@@ -270,7 +270,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.lbCargo);
             this.Controls.Add(this.lbNomeFuncionario);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lbNomeEstabelecimento);
             this.Name = "FormGestor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormGestor";
@@ -282,8 +282,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView dgvListaProdutos;
         private System.Windows.Forms.TextBox tbNumero;
@@ -301,5 +299,6 @@
         private System.Windows.Forms.MaskedTextBox mbPreco;
         public System.Windows.Forms.Label lbNomeFuncionario;
         public System.Windows.Forms.Label lbCargo;
+        public System.Windows.Forms.Label lbNomeEstabelecimento;
     }
 }

@@ -63,7 +63,6 @@ namespace Win_Forms_1
         {
             AtualizarProdutos();
         }
-
         private void btAdd_Click(object sender, EventArgs e)
         {
             int i = 0;

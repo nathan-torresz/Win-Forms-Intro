@@ -78,6 +78,7 @@ namespace Win_Forms_1
         {
             TempoFormRenda();
             AtualizarNomeVendedor();
+            formvendas.AtualizarNomeEstabelecimento();
             
         }
         private void AtualizarNomeVendedor()
