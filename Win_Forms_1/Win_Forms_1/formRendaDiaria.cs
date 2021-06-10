@@ -29,6 +29,7 @@ namespace Win_Forms_1
         public static double Total1 = FormInterface.Total;
         public void AtualizarRenda()
         {
+            Total1 = 0;
             foreach (DataGridViewRow linha in dgvRendaDiaria.Rows)
             {
                 Total1 += Convert.ToDouble(linha.Cells[0].Value);

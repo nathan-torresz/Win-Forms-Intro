@@ -70,11 +70,11 @@ namespace Win_Forms_1
             int linhasAfetadas = Executar(out SqlDataAdapter adapt);
             return adapt;
         }
-        public static void RegistrarVenda(Vendas v)
+        public static void RegistrarVenda(int idProduto, Produto v)
         {
             sql = new SqlCommand();
             sql.CommandText = $"INSERT INTO Vendas (Id_Produto, Numero, Nome_Produto, Marca_Produto, Descricao, Preco) " +
-                $"VALUES ('{v.IdProduto}', '{v.NumeroProduto}','{v.NomeProduto}','{v.MarcaProduto}','{v.DescricaoProduto}', " +
+                $"VALUES ({idProduto}, '{v.NumeroProduto}','{v.NomeProduto}','{v.MarcaProduto}','{v.DescricaoProduto}', " +
                 $"'{v.PrecoProduto}')";
             Executar(out SqlDataAdapter adapt);
         }
@@ -92,11 +92,11 @@ namespace Win_Forms_1
             int linhasAfetadas = Executar(out SqlDataAdapter adapt);
             return adapt;
         }
-        public static void InserirNoCarrinho(CarrinhoCompras c)
+        public static void InserirNoCarrinho(int idProduto ,Produto c)
         {
             sql = new SqlCommand();
             sql.CommandText = $"INSERT INTO Carrinho (Id_Produto, Numero, Nome_Produto, Marca_Produto, Descricao, Preco) " +
-                $"VALUES ('{c.IdProduto}', '{c.NumeroProduto}','{c.NomeProduto}','{c.MarcaProduto}','{c.DescricaoProduto}', " +
+                $"VALUES ({idProduto}, '{c.NumeroProduto}','{c.NomeProduto}','{c.MarcaProduto}','{c.DescricaoProduto}', " +
                 $"'{c.PrecoProduto}')";
             Executar(out SqlDataAdapter adapt);
         }
