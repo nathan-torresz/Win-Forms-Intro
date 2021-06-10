@@ -69,7 +69,6 @@ namespace Win_Forms_1
             this.Cursor = Cursors.Default;
             this.Hide();
         }
-
         private void btVoltar_Click(object sender, EventArgs e)
         {
             tbNomeCadastro.Clear();

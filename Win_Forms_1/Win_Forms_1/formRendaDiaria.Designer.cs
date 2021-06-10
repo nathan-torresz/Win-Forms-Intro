@@ -56,6 +56,9 @@
             // 
             // dgvRendaDiaria
             // 
+            this.dgvRendaDiaria.AllowUserToAddRows = false;
+            this.dgvRendaDiaria.AllowUserToDeleteRows = false;
+            this.dgvRendaDiaria.AllowUserToResizeRows = false;
             this.dgvRendaDiaria.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvRendaDiaria.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRendaDiaria.Location = new System.Drawing.Point(12, 187);
