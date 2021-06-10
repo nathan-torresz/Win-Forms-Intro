@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace Win_Forms_1
 {
-    class CarrinhoCompras:Produto
+    class CarrinhoCompras : Produto
     {
         private int _idProduto;
         public int IdProduto { get => _idProduto; private set => _idProduto = value; }
         public CarrinhoCompras(int idProduto, string numeroProduto, string nomeProduto, string marcaProduto, string descricaoProduto,
-            string precoProduto) :base(numeroProduto,nomeProduto,marcaProduto,descricaoProduto,precoProduto)
+            string precoProduto) : base(numeroProduto, nomeProduto, marcaProduto, descricaoProduto, precoProduto)
         {
             IdProduto = idProduto;
             NumeroProduto = numeroProduto;

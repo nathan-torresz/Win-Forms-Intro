@@ -28,9 +28,18 @@ namespace Win_Forms_1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Logar1();
-            AtualizarNomeVendedor();
-            AtualizarNomeEstabelecimento();
+            if(txtpassword2.Text.Length >= Funcionario.TAM_MIN_SENHA)
+            {
+                Logar1();
+                AtualizarNomeVendedor();
+                AtualizarNomeEstabelecimento();
+            }
+            else
+            {
+                MessageBox.Show("Insira o número correto de caracteres em: senha");
+                txtpassword2.Clear();
+                txtpassword2.Focus();
+            }
         }
         private void AtualizarNomeEstabelecimento()
         {
@@ -43,13 +52,27 @@ namespace Win_Forms_1
         }
         private void button2_Click(object sender, EventArgs e)
         {
-            Logar2();
-            AtualizarNomeGestor();
+            if(txtpassword2.Text.Length >= Funcionario.TAM_MIN_SENHA)
+            {
+                Logar2();
+                AtualizarNomeGestor();
+                AtualizarNomeEstabelecimentoGestor();
+            }
+            else
+            {
+                MessageBox.Show("Insira o número correto de caracteres em: senha");
+                txtpassword2.Clear();
+                txtpassword2.Focus();
+            }
         }
         private void AtualizarNomeGestor()
         {
             formgestor.lbNomeFuncionario.Text = txtUserName.Text;
             formgestor.lbCargo.Text = "Gestor(a)";
+        }
+        private void AtualizarNomeEstabelecimentoGestor()
+        {
+            formgestor.lbNomeEstabelecimento.Text = formcadastro.txtEstabelecimento.Text;
         }
 
         SqlConnection conexao1 = new SqlConnection(Properties.Settings.Default.conexao);

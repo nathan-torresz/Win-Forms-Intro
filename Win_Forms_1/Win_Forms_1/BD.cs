@@ -81,7 +81,7 @@ namespace Win_Forms_1
         public static SqlDataAdapter SelectPrecoVendas()
         {
             sql = new SqlCommand();
-            sql.CommandText = $"SELECT * FROM Vendas";
+            sql.CommandText = $"SELECT (Preco) FROM Vendas";
             int linhasAfetadas = Executar(out SqlDataAdapter adapt);
             return adapt;
         }
@@ -123,5 +123,3 @@ namespace Win_Forms_1
         }
     }
 }
-    
-

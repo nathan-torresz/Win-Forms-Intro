@@ -31,7 +31,7 @@ namespace Win_Forms_1
         {
             foreach (DataGridViewRow linha in dgvRendaDiaria.Rows)
             {
-                Total1 += Convert.ToDouble(linha.Cells[6].Value);
+                Total1 += Convert.ToDouble(linha.Cells[0].Value);
             }
             lbValorDiario.Text = "R$ " + Total1.ToString();
         }

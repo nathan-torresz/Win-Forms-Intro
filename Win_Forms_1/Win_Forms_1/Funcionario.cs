@@ -8,6 +8,8 @@ namespace Win_Forms_1
 {
     class Funcionario
     {
+        public const int TAM_MIN_SENHA = 6;
+
         private  string _nome;
         private string _cpf;
         private string _telefone;

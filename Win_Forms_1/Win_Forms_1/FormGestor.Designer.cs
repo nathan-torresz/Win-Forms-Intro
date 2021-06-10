@@ -46,7 +46,9 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.mbPreco = new System.Windows.Forms.MaskedTextBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaProdutos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // lbNomeEstabelecimento
@@ -67,7 +69,7 @@
             this.lbNomeFuncionario.BackColor = System.Drawing.Color.Transparent;
             this.lbNomeFuncionario.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbNomeFuncionario.ForeColor = System.Drawing.Color.Transparent;
-            this.lbNomeFuncionario.Location = new System.Drawing.Point(72, 9);
+            this.lbNomeFuncionario.Location = new System.Drawing.Point(81, 12);
             this.lbNomeFuncionario.Name = "lbNomeFuncionario";
             this.lbNomeFuncionario.Size = new System.Drawing.Size(174, 24);
             this.lbNomeFuncionario.TabIndex = 1;
@@ -79,12 +81,11 @@
             this.lbCargo.BackColor = System.Drawing.Color.Transparent;
             this.lbCargo.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbCargo.ForeColor = System.Drawing.Color.Transparent;
-            this.lbCargo.Location = new System.Drawing.Point(72, 32);
+            this.lbCargo.Location = new System.Drawing.Point(81, 35);
             this.lbCargo.Name = "lbCargo";
             this.lbCargo.Size = new System.Drawing.Size(64, 24);
             this.lbCargo.TabIndex = 2;
             this.lbCargo.Text = "Cargo";
-            this.lbCargo.Click += new System.EventHandler(this.lbCargo_Click);
             // 
             // label4
             // 
@@ -247,12 +248,24 @@
             this.mbPreco.Size = new System.Drawing.Size(148, 22);
             this.mbPreco.TabIndex = 18;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = global::Win_Forms_1.Properties.Resources.laptop_user_1_1179329;
+            this.pictureBox2.Location = new System.Drawing.Point(13, 12);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(68, 73);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 19;
+            this.pictureBox2.TabStop = false;
+            // 
             // FormGestor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Win_Forms_1.Properties.Resources.fundologin;
             this.ClientSize = new System.Drawing.Size(962, 613);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.mbPreco);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
@@ -276,6 +289,7 @@
             this.Text = "FormGestor";
             this.Load += new System.EventHandler(this.FormGestor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaProdutos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -300,5 +314,6 @@
         public System.Windows.Forms.Label lbNomeFuncionario;
         public System.Windows.Forms.Label lbCargo;
         public System.Windows.Forms.Label lbNomeEstabelecimento;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

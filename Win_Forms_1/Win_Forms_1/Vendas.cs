@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Win_Forms_1
 {
-    class Vendas: Produto
+    class Vendas : Produto
     {
         private int _idProduto;
         public int IdProduto { get => _idProduto; private set => _idProduto = value; }

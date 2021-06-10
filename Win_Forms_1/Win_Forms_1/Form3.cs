@@ -38,23 +38,27 @@ namespace Win_Forms_1
             {
                 txtEstabelecimento.Enabled = false;
             }
-            try
+
+            if(tbSenhaCadastro.Text.Length >= Funcionario.TAM_MIN_SENHA)
             {
-                i = BD.InserirFuncionario(new Funcionario(nome,cpf,telefone,email,senha,cargo));
-            }
-            catch(Exception exception)
-            {
-                MessageBox.Show($"Erro ao cadastrar!");
-            }
-            finally
-            {
-                MessageBox.Show($"Cadastro de {tbNomeCadastro.Text} efetuado com sucesso!");
-                tbNomeCadastro.Clear();
-                mbCpf.Clear();
-                tbTelefone.Clear();
-                tbEmailCadastro.Clear();
-                tbSenhaCadastro.Clear();
-                tbNomeCadastro.Focus();
+                try
+                {
+                    i = BD.InserirFuncionario(new Funcionario(nome, cpf, telefone, email, senha, cargo));
+                }
+                catch (Exception exception)
+                {
+                    MessageBox.Show($"Erro ao cadastrar!");
+                }
+                finally
+                {
+                    MessageBox.Show($"Cadastro de {tbNomeCadastro.Text} efetuado com sucesso!");
+                    tbNomeCadastro.Clear();
+                    mbCpf.Clear();
+                    tbTelefone.Clear();
+                    tbEmailCadastro.Clear();
+                    tbSenhaCadastro.Clear();
+                    tbNomeCadastro.Focus();
+                }
             }
         }
         private void TempoFormCadastro()

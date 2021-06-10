@@ -20,7 +20,7 @@ namespace Win_Forms_1
         public string DescricaoProduto { get => _descricaoProduto; set => _descricaoProduto = value; }
         public string PrecoProduto { get => _precoProduto; set => _precoProduto = value; }
 
-        public Produto(string numeroProduto, string nomeProduto, string marcaProduto, string descricaoProduto, 
+        public Produto(string numeroProduto, string nomeProduto, string marcaProduto, string descricaoProduto,
             string precoProduto)
         {
             NumeroProduto = numeroProduto;

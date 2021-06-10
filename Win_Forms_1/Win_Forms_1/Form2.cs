@@ -79,7 +79,7 @@ namespace Win_Forms_1
             TempoFormRenda();
             AtualizarNomeVendedor();
             formvendas.AtualizarNomeEstabelecimento();
-            
+
         }
         private void AtualizarNomeVendedor()
         {
@@ -258,7 +258,7 @@ namespace Win_Forms_1
                 BD.InserirNoCarrinho(new CarrinhoCompras(idProduto, numeroProduto, nomeProduto, marcaProduto, descricaoProduto,
                     precoProduto));
                 ListaCarrinho();
-                
+
             }
             else
             {
@@ -300,7 +300,7 @@ namespace Win_Forms_1
 
         private void btRemoverDoCarrinho_Click(object sender, EventArgs e)
         {
-            if(dgvCarrinho.SelectedRows.Count > 0)
+            if (dgvCarrinho.SelectedRows.Count > 0)
             {
                 int linhaSelecionada = dgvCarrinho.SelectedCells[0].RowIndex;
                 int idProduto = (int)dgvCarrinho.Rows[linhaSelecionada].Cells[0].Value;
@@ -310,7 +310,7 @@ namespace Win_Forms_1
 
                 dgvCarrinho.Rows.RemoveAt(dgvCarrinho.CurrentRow.Index);
                 BD.DeletarDoCarrinho(idProduto);
-                
+
             }
             else
             {

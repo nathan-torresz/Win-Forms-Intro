@@ -28,13 +28,13 @@ namespace Win_Forms_1
             {
                 adapt = BD.SelectNumeroNomeProdutos();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show("Erro!");
             }
             finally
             {
-                if(adapt != null)
+                if (adapt != null)
                 {
                     DataTable tabela = new DataTable();
                     adapt.Fill(tabela);
@@ -74,9 +74,9 @@ namespace Win_Forms_1
 
             try
             {
-               i = BD.InserirProduto(new Produto(numero, nome, marca, descricao, preco));
+                i = BD.InserirProduto(new Produto(numero, nome, marca, descricao, preco));
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show("Erro ao adicionar produto!" + ex);
             }
@@ -90,11 +90,6 @@ namespace Win_Forms_1
                 tbMarca.Clear();
                 mbPreco.Clear();
             }
-        }
-
-        private void lbCargo_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
