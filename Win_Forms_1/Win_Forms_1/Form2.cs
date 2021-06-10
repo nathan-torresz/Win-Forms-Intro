@@ -151,27 +151,29 @@ namespace Win_Forms_1
         public static double Total = 0;
         private void btEfetuarVenda_Click(object sender, EventArgs e)
         {
-            for(int i = 0; i< dgvCarrinho.Rows.Count;i++)
+            if(dgvCarrinho.Rows.Count > 0)
             {
-                //int linhaSelecionada = dgvCarrinho.SelectedCells[0].RowIndex;
-                int linhaSelecionada = i;
-                int idProduto = (int)dgvCarrinho.Rows[linhaSelecionada].Cells[1].Value;
-                string numeroProduto = (string)dgvCarrinho.Rows[linhaSelecionada].Cells[2].Value;
-                string nomeProduto = (string)dgvCarrinho.Rows[linhaSelecionada].Cells[3].Value;
-                string marcaProduto = (string)dgvCarrinho.Rows[linhaSelecionada].Cells[4].Value;
-                string descricaoProduto = (string)dgvCarrinho.Rows[linhaSelecionada].Cells[5].Value;
-                string precoProduto = (string)dgvCarrinho.Rows[linhaSelecionada].Cells[6].Value;
-
                 try
                 {
                     DialogResult msg = MessageBox.Show("O pagamento foi realizado corretamente?",
                         "Confirmação", MessageBoxButtons.YesNo);
                     if (msg == DialogResult.Yes)
                     {
+                        //Acrescenta todos os itens do carrinho em vendas.
+                        for (int i = 0; i < dgvCarrinho.Rows.Count; i++)
+                        {
+                            int linhaSelecionada = i;
+                            int idProduto = (int)dgvCarrinho.Rows[linhaSelecionada].Cells[1].Value;
+                            string numeroProduto = (string)dgvCarrinho.Rows[linhaSelecionada].Cells[2].Value;
+                            string nomeProduto = (string)dgvCarrinho.Rows[linhaSelecionada].Cells[3].Value;
+                            string marcaProduto = (string)dgvCarrinho.Rows[linhaSelecionada].Cells[4].Value;
+                            string descricaoProduto = (string)dgvCarrinho.Rows[linhaSelecionada].Cells[5].Value;
+                            string precoProduto = (string)dgvCarrinho.Rows[linhaSelecionada].Cells[6].Value;
 
+                            BD.RegistrarVenda(idProduto, new Produto(numeroProduto, nomeProduto, marcaProduto, descricaoProduto,
+                                precoProduto));
+                        }
                         MessageBox.Show("Compra finalizada com sucesso!");
-                        BD.RegistrarVenda(idProduto,new Produto(numeroProduto, nomeProduto, marcaProduto, descricaoProduto,
-                            precoProduto));
                     }
                     else
                     {
@@ -186,13 +188,12 @@ namespace Win_Forms_1
                 {
                     double num = 0;
                     lbTotalAPagar.Text = num.ToString();
-                    
                     ListarPrecoVendas();
                     ListaCarrinho();
                     ListarVendas();
                 }
             }
-            if (dgvCarrinho.Rows.Count <= 0)
+            else
             {
                 MessageBox.Show("Nao há itens no seu carrinho!");
             }
@@ -200,9 +201,10 @@ namespace Win_Forms_1
             {
                 BD.ExcluirCarrinho();
                 ListaCarrinho();
-            }catch(Exception ex)
+            }
+            catch(Exception ex)
             {
-
+                MessageBox.Show("Não foi possível limpar o carrinho!" + ex);
             }
         }
         public void ListarVendas()
