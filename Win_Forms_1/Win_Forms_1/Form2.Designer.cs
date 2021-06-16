@@ -196,6 +196,7 @@
             this.tbNumeroProduto.Name = "tbNumeroProduto";
             this.tbNumeroProduto.Size = new System.Drawing.Size(180, 22);
             this.tbNumeroProduto.TabIndex = 8;
+            this.tbNumeroProduto.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbNumeroProduto_KeyDown);
             // 
             // label4
             // 

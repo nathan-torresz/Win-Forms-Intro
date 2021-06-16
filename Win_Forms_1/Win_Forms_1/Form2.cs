@@ -326,5 +326,13 @@ namespace Win_Forms_1
                 MessageBox.Show("Selecione um item a ser removido!");
             }
         }
+
+        private void tbNumeroProduto_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                btBuscar_Click(this, new EventArgs());
+            }
+        }
     }
 }
