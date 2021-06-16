@@ -33,6 +33,7 @@ namespace Win_Forms_1
                 Logar1();
                 AtualizarNomeVendedor();
                 AtualizarNomeEstabelecimento();
+                forminterface.tbNumeroProduto.Focus();
             }
             else
             {
@@ -57,6 +58,7 @@ namespace Win_Forms_1
                 Logar2();
                 AtualizarNomeGestor();
                 AtualizarNomeEstabelecimentoGestor();
+                forminterface.tbNumeroProduto.Focus();
             }
             else
             {

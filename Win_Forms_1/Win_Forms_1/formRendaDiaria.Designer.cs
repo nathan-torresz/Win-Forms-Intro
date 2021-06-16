@@ -58,8 +58,11 @@
             // 
             this.dgvRendaDiaria.AllowUserToAddRows = false;
             this.dgvRendaDiaria.AllowUserToDeleteRows = false;
+            this.dgvRendaDiaria.AllowUserToResizeColumns = false;
             this.dgvRendaDiaria.AllowUserToResizeRows = false;
+            this.dgvRendaDiaria.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.dgvRendaDiaria.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvRendaDiaria.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvRendaDiaria.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRendaDiaria.Location = new System.Drawing.Point(12, 187);
             this.dgvRendaDiaria.MultiSelect = false;

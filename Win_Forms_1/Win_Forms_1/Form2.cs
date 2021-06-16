@@ -174,6 +174,20 @@ namespace Win_Forms_1
                                 precoProduto));
                         }
                         MessageBox.Show("Compra finalizada com sucesso!");
+                        try
+                        {
+                            BD.ExcluirCarrinho();
+                            double num = 0;
+                            lbTotalAPagar.Text = num.ToString();
+                            ListarPrecoVendas();
+                            ListarVendas();
+                            ListaCarrinho();
+                            tbNumeroProduto.Focus();
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Não foi possível limpar o carrinho!" + ex);
+                        }
                     }
                     else
                     {
@@ -182,29 +196,12 @@ namespace Win_Forms_1
                 }
                 catch (SqlException ex)
                 {
-                    MessageBox.Show("Erro ao finalizar compra!");
-                }
-                finally
-                {
-                    double num = 0;
-                    lbTotalAPagar.Text = num.ToString();
-                    ListarPrecoVendas();
-                    ListaCarrinho();
-                    ListarVendas();
+                    MessageBox.Show("Erro ao finalizar compra!" + ex);
                 }
             }
             else
             {
                 MessageBox.Show("Nao há itens no seu carrinho!");
-            }
-            try
-            {
-                BD.ExcluirCarrinho();
-                ListaCarrinho();
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show("Não foi possível limpar o carrinho!" + ex);
             }
         }
         public void ListarVendas()

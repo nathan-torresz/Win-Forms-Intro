@@ -226,6 +226,7 @@
             this.dgvProdutos.AllowUserToAddRows = false;
             this.dgvProdutos.AllowUserToDeleteRows = false;
             this.dgvProdutos.AllowUserToResizeColumns = false;
+            this.dgvProdutos.AllowUserToResizeRows = false;
             this.dgvProdutos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvProdutos.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvProdutos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -233,6 +234,7 @@
             this.dgvProdutos.MultiSelect = false;
             this.dgvProdutos.Name = "dgvProdutos";
             this.dgvProdutos.RowHeadersWidth = 51;
+            this.dgvProdutos.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvProdutos.RowTemplate.Height = 24;
             this.dgvProdutos.Size = new System.Drawing.Size(963, 125);
             this.dgvProdutos.TabIndex = 11;
@@ -281,6 +283,7 @@
             this.dgvCarrinho.AllowUserToAddRows = false;
             this.dgvCarrinho.AllowUserToDeleteRows = false;
             this.dgvCarrinho.AllowUserToResizeColumns = false;
+            this.dgvCarrinho.AllowUserToResizeRows = false;
             this.dgvCarrinho.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvCarrinho.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvCarrinho.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -288,6 +291,7 @@
             this.dgvCarrinho.MultiSelect = false;
             this.dgvCarrinho.Name = "dgvCarrinho";
             this.dgvCarrinho.RowHeadersWidth = 51;
+            this.dgvCarrinho.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvCarrinho.RowTemplate.Height = 24;
             this.dgvCarrinho.Size = new System.Drawing.Size(963, 125);
             this.dgvCarrinho.TabIndex = 15;
@@ -364,7 +368,6 @@
         private System.Windows.Forms.Button btRendaDiaria;
         private System.Windows.Forms.Button btvendas;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox tbNumeroProduto;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox2;
         public System.Windows.Forms.Label lbNomeFuncionario;
@@ -377,5 +380,6 @@
         private System.Windows.Forms.Button btRemoverDoCarrinho;
         public System.Windows.Forms.DataGridView dgvCarrinho;
         public System.Windows.Forms.Label lbTotalAPagar;
+        public System.Windows.Forms.TextBox tbNumeroProduto;
     }
 }
