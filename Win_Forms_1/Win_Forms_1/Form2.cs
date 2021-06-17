@@ -273,6 +273,7 @@ namespace Win_Forms_1
             {
                 MessageBox.Show("Selecione o produto a ser adicionado!");
             }
+            tbNumeroProduto.Focus();
         }
         public void ListaCarrinho()
         {
@@ -332,6 +333,63 @@ namespace Win_Forms_1
             if(e.KeyCode == Keys.Enter)
             {
                 btBuscar_Click(this, new EventArgs());
+            }
+        }
+        private void FormInterface_Resize(object sender, EventArgs e)
+        {
+            if (this.WindowState == System.Windows.Forms.FormWindowState.Maximized)
+            {
+                int largura = Convert.ToInt32(this.Size.Width * 0.98f);
+                int altura = Convert.ToInt32(this.Size.Height * 0.21f);
+                dgvProdutos.Size = new Size(largura, altura);
+                dgvCarrinho.Size = new Size(largura, altura);
+                int dgvX = Convert.ToInt32(this.Location.X * (-1));
+                int dgvY = Convert.ToInt32(this.Location.Y * (-65));
+                dgvCarrinho.Location = new Point(dgvX,dgvY);
+                int dgvProdX = Convert.ToInt32(this.Location.X * (-1));
+                int dgvProdY = Convert.ToInt32(this.Location.Y * (-40));
+                dgvProdutos.Location = new Point(dgvProdX, dgvProdY);
+
+                int locateX = Convert.ToInt32(this.Location.X * (-150f));
+                int locateY = Convert.ToInt32(this.Location.Y * (-95));
+                lbTotalAPagar.Location = new Point(locateX, locateY);
+                int larguraLbTotalPagar = Convert.ToInt32(this.Size.Width * 0.2f);
+                int alturaLbTotalPagar = Convert.ToInt32(this.Size.Height * 0.06);
+                lbTotalAPagar.Size = new Size(larguraLbTotalPagar, alturaLbTotalPagar);
+
+                int locateNovaVenda = Convert.ToInt32(this.Location.X * (-80));
+                lbNovaVenda.Location = new Point(locateNovaVenda);
+                int locateTbTotalPagar = Convert.ToInt32(this.Location.X * (-82));
+                int locateTbTotalPagarY = Convert.ToInt32(this.Location.Y * (-30));
+                tbNumeroProduto.Location = new Point(locateTbTotalPagar,locateTbTotalPagarY);
+                int locateLbNumProduto = Convert.ToInt32(this.Location.X * (-68));
+                int locateLbNumProdutoY = Convert.ToInt32(this.Location.Y * (-30));
+                lbNumProduto.Location = new Point(locateLbNumProduto,locateLbNumProdutoY);
+
+                int locateEfetuarVenda = Convert.ToInt32(this.Location.X * (-75));
+                int locateEfetuarVendaY = Convert.ToInt32(this.Location.Y * (-98));
+                btEfetuarVenda.Location = new Point(locateEfetuarVenda,locateEfetuarVendaY);
+                int larguraBtVender = Convert.ToInt32(this.Size.Width * 0.3f);
+                int alturaBtVender = Convert.ToInt32(this.Size.Height * 0.05f);
+                btEfetuarVenda.Size = new Size(larguraBtVender, alturaBtVender);
+
+                int locateAddCart = Convert.ToInt32(this.Location.X * (-3));
+                int locateAddCartY = Convert.ToInt32(this.Location.Y * (-90));
+                btAddCarrinho.Location = new Point(locateAddCart, locateAddCartY);
+                int larguraAddCart = Convert.ToInt32(this.Size.Width * 0.15f);
+                int alturaAddCart = Convert.ToInt32(this.Size.Height * 0.055f);
+                btAddCarrinho.Size = new Size(larguraAddCart, alturaAddCart);
+
+                int locateRemoveCart = Convert.ToInt32(this.Location.X * (-35));
+                int locateRemoveCartY = Convert.ToInt32(this.Location.Y * (-90));
+                btRemoverDoCarrinho.Location = new Point(locateRemoveCart, locateRemoveCartY);
+                int larguraRemoveCart = Convert.ToInt32(this.Size.Width * 0.15f);
+                int alturaRemoveCart = Convert.ToInt32(this.Size.Height * 0.055f);
+                btRemoverDoCarrinho.Size = new Size(larguraRemoveCart, alturaRemoveCart);
+
+                int locateBtBusca = Convert.ToInt32(this.Location.X * (-84));
+                int locateBtBuscaY = Convert.ToInt32(this.Location.Y * (-35));
+                btBuscar.Location = new Point(locateBtBusca,locateBtBuscaY);
             }
         }
     }

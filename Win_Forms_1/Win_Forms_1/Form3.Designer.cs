@@ -154,6 +154,7 @@
             // btCadastrar
             // 
             this.btCadastrar.BackColor = System.Drawing.Color.Indigo;
+            this.btCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btCadastrar.Font = new System.Drawing.Font("Bauhaus 93", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btCadastrar.ForeColor = System.Drawing.Color.Transparent;
             this.btCadastrar.Location = new System.Drawing.Point(369, 354);
@@ -167,6 +168,7 @@
             // btVoltar
             // 
             this.btVoltar.BackColor = System.Drawing.Color.Indigo;
+            this.btVoltar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btVoltar.Font = new System.Drawing.Font("Bauhaus 93", 10F);
             this.btVoltar.ForeColor = System.Drawing.Color.Transparent;
             this.btVoltar.Location = new System.Drawing.Point(12, 405);
@@ -242,6 +244,8 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "FormCadastro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastrar-se";

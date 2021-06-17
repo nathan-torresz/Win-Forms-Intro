@@ -37,9 +37,9 @@
             this.btRendaDiaria = new System.Windows.Forms.Button();
             this.btvendas = new System.Windows.Forms.Button();
             this.lbEstabelecimento = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lbNovaVenda = new System.Windows.Forms.Label();
             this.tbNumeroProduto = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lbNumProduto = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.dgvProdutos = new System.Windows.Forms.DataGridView();
             this.btEfetuarVenda = new System.Windows.Forms.Button();
@@ -177,18 +177,18 @@
             this.lbEstabelecimento.Text = "estabelecimento";
             this.lbEstabelecimento.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label3
+            // lbNovaVenda
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label3.Font = new System.Drawing.Font("Bauhaus 93", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Transparent;
-            this.label3.Location = new System.Drawing.Point(475, 169);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(227, 45);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Nova Venda";
+            this.lbNovaVenda.AutoSize = true;
+            this.lbNovaVenda.BackColor = System.Drawing.Color.Transparent;
+            this.lbNovaVenda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lbNovaVenda.Font = new System.Drawing.Font("Bauhaus 93", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNovaVenda.ForeColor = System.Drawing.Color.Transparent;
+            this.lbNovaVenda.Location = new System.Drawing.Point(475, 169);
+            this.lbNovaVenda.Name = "lbNovaVenda";
+            this.lbNovaVenda.Size = new System.Drawing.Size(227, 45);
+            this.lbNovaVenda.TabIndex = 7;
+            this.lbNovaVenda.Text = "Nova Venda";
             // 
             // tbNumeroProduto
             // 
@@ -198,18 +198,18 @@
             this.tbNumeroProduto.TabIndex = 8;
             this.tbNumeroProduto.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbNumeroProduto_KeyDown);
             // 
-            // label4
+            // lbNumProduto
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label4.Font = new System.Drawing.Font("Bauhaus 93", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Transparent;
-            this.label4.Location = new System.Drawing.Point(368, 270);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(131, 23);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "Nº do Produto";
+            this.lbNumProduto.AutoSize = true;
+            this.lbNumProduto.BackColor = System.Drawing.Color.Transparent;
+            this.lbNumProduto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lbNumProduto.Font = new System.Drawing.Font("Bauhaus 93", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNumProduto.ForeColor = System.Drawing.Color.Transparent;
+            this.lbNumProduto.Location = new System.Drawing.Point(368, 270);
+            this.lbNumProduto.Name = "lbNumProduto";
+            this.lbNumProduto.Size = new System.Drawing.Size(131, 23);
+            this.lbNumProduto.TabIndex = 9;
+            this.lbNumProduto.Text = "Nº do Produto";
             // 
             // pictureBox2
             // 
@@ -243,6 +243,7 @@
             // btEfetuarVenda
             // 
             this.btEfetuarVenda.BackColor = System.Drawing.Color.Indigo;
+            this.btEfetuarVenda.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btEfetuarVenda.Font = new System.Drawing.Font("Bauhaus 93", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btEfetuarVenda.ForeColor = System.Drawing.Color.Transparent;
             this.btEfetuarVenda.Location = new System.Drawing.Point(325, 644);
@@ -256,6 +257,7 @@
             // btBuscar
             // 
             this.btBuscar.BackColor = System.Drawing.Color.Indigo;
+            this.btBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btBuscar.Font = new System.Drawing.Font("Bauhaus 93", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btBuscar.ForeColor = System.Drawing.Color.Transparent;
             this.btBuscar.Location = new System.Drawing.Point(546, 296);
@@ -300,6 +302,7 @@
             // btAddCarrinho
             // 
             this.btAddCarrinho.BackColor = System.Drawing.Color.Indigo;
+            this.btAddCarrinho.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btAddCarrinho.Font = new System.Drawing.Font("Bauhaus 93", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btAddCarrinho.ForeColor = System.Drawing.Color.Transparent;
             this.btAddCarrinho.Location = new System.Drawing.Point(39, 593);
@@ -313,6 +316,7 @@
             // btRemoverDoCarrinho
             // 
             this.btRemoverDoCarrinho.BackColor = System.Drawing.Color.Indigo;
+            this.btRemoverDoCarrinho.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btRemoverDoCarrinho.Font = new System.Drawing.Font("Bauhaus 93", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btRemoverDoCarrinho.ForeColor = System.Drawing.Color.Transparent;
             this.btRemoverDoCarrinho.Location = new System.Drawing.Point(269, 593);
@@ -338,18 +342,20 @@
             this.Controls.Add(this.btEfetuarVenda);
             this.Controls.Add(this.dgvProdutos);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lbNumProduto);
             this.Controls.Add(this.tbNumeroProduto);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lbNovaVenda);
             this.Controls.Add(this.lbEstabelecimento);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.lbCargo);
             this.Controls.Add(this.lbNomeFuncionario);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FormInterface";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form2";
+            this.Resize += new System.EventHandler(this.FormInterface_Resize);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -368,8 +374,8 @@
         private System.Windows.Forms.Button btEstoque;
         private System.Windows.Forms.Button btRendaDiaria;
         private System.Windows.Forms.Button btvendas;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lbNovaVenda;
+        private System.Windows.Forms.Label lbNumProduto;
         private System.Windows.Forms.PictureBox pictureBox2;
         public System.Windows.Forms.Label lbNomeFuncionario;
         public System.Windows.Forms.Label lbCargo;
