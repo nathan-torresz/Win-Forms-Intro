@@ -25,6 +25,7 @@ namespace Win_Forms_1
         {
             TempoFormInterface();
             forminterface.dgvCarrinho.ClearSelection();
+            forminterface.tbNumeroProduto.Focus();
         }
         public static double Total1 = FormInterface.Total;
         public void AtualizarRenda()

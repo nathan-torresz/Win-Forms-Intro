@@ -155,7 +155,7 @@
             // 
             this.btCadastrar.BackColor = System.Drawing.Color.Indigo;
             this.btCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btCadastrar.Font = new System.Drawing.Font("Bauhaus 93", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btCadastrar.Font = new System.Drawing.Font("Bahnschrift", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btCadastrar.ForeColor = System.Drawing.Color.Transparent;
             this.btCadastrar.Location = new System.Drawing.Point(369, 354);
             this.btCadastrar.Name = "btCadastrar";
@@ -169,7 +169,7 @@
             // 
             this.btVoltar.BackColor = System.Drawing.Color.Indigo;
             this.btVoltar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btVoltar.Font = new System.Drawing.Font("Bauhaus 93", 10F);
+            this.btVoltar.Font = new System.Drawing.Font("Bahnschrift", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btVoltar.ForeColor = System.Drawing.Color.Transparent;
             this.btVoltar.Location = new System.Drawing.Point(12, 405);
             this.btVoltar.Name = "btVoltar";

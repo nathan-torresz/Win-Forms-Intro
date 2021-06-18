@@ -26,6 +26,7 @@ namespace Win_Forms_1
         private void btVoltar_Click(object sender, EventArgs e)
         {
             TempoFormInterface();
+            forminterface.tbNumeroProduto.Focus();
         }
         private void TempoFormInterface()
         {

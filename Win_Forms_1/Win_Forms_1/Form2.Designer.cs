@@ -32,7 +32,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.lbNomeFuncionario = new System.Windows.Forms.Label();
             this.lbCargo = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.gbBotoesDeAcesso = new System.Windows.Forms.GroupBox();
             this.btEstoque = new System.Windows.Forms.Button();
             this.btRendaDiaria = new System.Windows.Forms.Button();
             this.btvendas = new System.Windows.Forms.Button();
@@ -40,7 +40,7 @@
             this.lbNovaVenda = new System.Windows.Forms.Label();
             this.tbNumeroProduto = new System.Windows.Forms.TextBox();
             this.lbNumProduto = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pbImagemUsuario = new System.Windows.Forms.PictureBox();
             this.dgvProdutos = new System.Windows.Forms.DataGridView();
             this.btEfetuarVenda = new System.Windows.Forms.Button();
             this.btBuscar = new System.Windows.Forms.Button();
@@ -49,8 +49,8 @@
             this.btAddCarrinho = new System.Windows.Forms.Button();
             this.btRemoverDoCarrinho = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.gbBotoesDeAcesso.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbImagemUsuario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProdutos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCarrinho)).BeginInit();
             this.SuspendLayout();
@@ -110,19 +110,19 @@
             this.lbCargo.TabIndex = 4;
             this.lbCargo.Text = "CARGO";
             // 
-            // groupBox1
+            // gbBotoesDeAcesso
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox1.Controls.Add(this.btEstoque);
-            this.groupBox1.Controls.Add(this.btRendaDiaria);
-            this.groupBox1.Controls.Add(this.btvendas);
-            this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(15, 146);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(238, 147);
-            this.groupBox1.TabIndex = 5;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Acessar";
+            this.gbBotoesDeAcesso.BackColor = System.Drawing.Color.Transparent;
+            this.gbBotoesDeAcesso.Controls.Add(this.btEstoque);
+            this.gbBotoesDeAcesso.Controls.Add(this.btRendaDiaria);
+            this.gbBotoesDeAcesso.Controls.Add(this.btvendas);
+            this.gbBotoesDeAcesso.ForeColor = System.Drawing.Color.White;
+            this.gbBotoesDeAcesso.Location = new System.Drawing.Point(15, 146);
+            this.gbBotoesDeAcesso.Name = "gbBotoesDeAcesso";
+            this.gbBotoesDeAcesso.Size = new System.Drawing.Size(238, 147);
+            this.gbBotoesDeAcesso.TabIndex = 5;
+            this.gbBotoesDeAcesso.TabStop = false;
+            this.gbBotoesDeAcesso.Text = "Acessar";
             // 
             // btEstoque
             // 
@@ -182,20 +182,22 @@
             this.lbNovaVenda.AutoSize = true;
             this.lbNovaVenda.BackColor = System.Drawing.Color.Transparent;
             this.lbNovaVenda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lbNovaVenda.Font = new System.Drawing.Font("Bauhaus 93", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNovaVenda.Font = new System.Drawing.Font("Bahnschrift", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbNovaVenda.ForeColor = System.Drawing.Color.Transparent;
             this.lbNovaVenda.Location = new System.Drawing.Point(475, 169);
             this.lbNovaVenda.Name = "lbNovaVenda";
-            this.lbNovaVenda.Size = new System.Drawing.Size(227, 45);
+            this.lbNovaVenda.Size = new System.Drawing.Size(228, 48);
             this.lbNovaVenda.TabIndex = 7;
             this.lbNovaVenda.Text = "Nova Venda";
             // 
             // tbNumeroProduto
             // 
             this.tbNumeroProduto.Location = new System.Drawing.Point(505, 270);
+            this.tbNumeroProduto.Multiline = true;
             this.tbNumeroProduto.Name = "tbNumeroProduto";
             this.tbNumeroProduto.Size = new System.Drawing.Size(180, 22);
             this.tbNumeroProduto.TabIndex = 8;
+            this.tbNumeroProduto.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tbNumeroProduto.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbNumeroProduto_KeyDown);
             // 
             // lbNumProduto
@@ -203,24 +205,24 @@
             this.lbNumProduto.AutoSize = true;
             this.lbNumProduto.BackColor = System.Drawing.Color.Transparent;
             this.lbNumProduto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lbNumProduto.Font = new System.Drawing.Font("Bauhaus 93", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNumProduto.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbNumProduto.ForeColor = System.Drawing.Color.Transparent;
-            this.lbNumProduto.Location = new System.Drawing.Point(368, 270);
+            this.lbNumProduto.Location = new System.Drawing.Point(392, 266);
             this.lbNumProduto.Name = "lbNumProduto";
-            this.lbNumProduto.Size = new System.Drawing.Size(131, 23);
+            this.lbNumProduto.Size = new System.Drawing.Size(101, 24);
             this.lbNumProduto.TabIndex = 9;
             this.lbNumProduto.Text = "Nº do Produto";
             // 
-            // pictureBox2
+            // pbImagemUsuario
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = global::Win_Forms_1.Properties.Resources.laptop_user_1_1179329;
-            this.pictureBox2.Location = new System.Drawing.Point(15, 20);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(68, 73);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 10;
-            this.pictureBox2.TabStop = false;
+            this.pbImagemUsuario.BackColor = System.Drawing.Color.Transparent;
+            this.pbImagemUsuario.Image = global::Win_Forms_1.Properties.Resources.laptop_user_1_1179329;
+            this.pbImagemUsuario.Location = new System.Drawing.Point(15, 20);
+            this.pbImagemUsuario.Name = "pbImagemUsuario";
+            this.pbImagemUsuario.Size = new System.Drawing.Size(68, 73);
+            this.pbImagemUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbImagemUsuario.TabIndex = 10;
+            this.pbImagemUsuario.TabStop = false;
             // 
             // dgvProdutos
             // 
@@ -256,9 +258,10 @@
             // 
             // btBuscar
             // 
+            this.btBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.btBuscar.BackColor = System.Drawing.Color.Indigo;
             this.btBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btBuscar.Font = new System.Drawing.Font("Bauhaus 93", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btBuscar.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btBuscar.ForeColor = System.Drawing.Color.Transparent;
             this.btBuscar.Location = new System.Drawing.Point(546, 296);
             this.btBuscar.Name = "btBuscar";
@@ -341,12 +344,12 @@
             this.Controls.Add(this.btBuscar);
             this.Controls.Add(this.btEfetuarVenda);
             this.Controls.Add(this.dgvProdutos);
-            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pbImagemUsuario);
             this.Controls.Add(this.lbNumProduto);
             this.Controls.Add(this.tbNumeroProduto);
             this.Controls.Add(this.lbNovaVenda);
             this.Controls.Add(this.lbEstabelecimento);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.gbBotoesDeAcesso);
             this.Controls.Add(this.lbCargo);
             this.Controls.Add(this.lbNomeFuncionario);
             this.Controls.Add(this.label2);
@@ -357,8 +360,8 @@
             this.Text = "Form2";
             this.Resize += new System.EventHandler(this.FormInterface_Resize);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.gbBotoesDeAcesso.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbImagemUsuario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProdutos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCarrinho)).EndInit();
             this.ResumeLayout(false);
@@ -370,13 +373,13 @@
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox gbBotoesDeAcesso;
         private System.Windows.Forms.Button btEstoque;
         private System.Windows.Forms.Button btRendaDiaria;
         private System.Windows.Forms.Button btvendas;
         private System.Windows.Forms.Label lbNovaVenda;
         private System.Windows.Forms.Label lbNumProduto;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pbImagemUsuario;
         public System.Windows.Forms.Label lbNomeFuncionario;
         public System.Windows.Forms.Label lbCargo;
         public System.Windows.Forms.Label lbEstabelecimento;
